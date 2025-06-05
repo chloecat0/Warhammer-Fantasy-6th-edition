@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5f3d-d4db-ca2f-f63d" name="Lizardmen" revision="9" battleScribeVersion="2.03" authorName="Thomas Saxon and Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="5f3d-d4db-ca2f-f63d" name="Lizardmen" revision="10" battleScribeVersion="2.03" authorName="Thomas Saxon and Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <publications>
     <publication id="3a49-dd2e-fcaa-cdb1" name="Lizardmen  2003"/>
   </publications>
@@ -9,7 +9,7 @@
   <selectionEntries>
     <selectionEntry id="64c4-4576-b4b0-0b87" name="Slann Mage Priest" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
-        <infoLink id="474d-f82a-a406-c6aa" name="Slan Mage Priest" hidden="false" targetId="5943-700c-955c-d22d" type="profile"/>
+        <infoLink id="474d-f82a-a406-c6aa" name="Slann Mage Priest" hidden="false" targetId="5943-700c-955c-d22d" type="profile"/>
         <infoLink id="9ab3-dcbe-e8b5-fb40" name="Cold Blooded" hidden="false" targetId="da71-1c1e-ded6-959a" type="rule"/>
         <infoLink id="ec48-d964-8516-04dd" name="Large Target" hidden="false" targetId="25b1-e384-bfcb-beed" type="rule"/>
         <infoLink id="ca22-410b-2897-9791" name="Palanquin" hidden="false" targetId="1be8-a4e9-32f6-2589" type="rule"/>
@@ -20,7 +20,7 @@
         <infoLink id="50c1-60af-e480-be56" name="Unit Strength 5" hidden="false" targetId="6b65-6cb5-58ae-dfe3" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="497d-ea1e-10b3-3268" name="New CategoryLink" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="true"/>
+        <categoryLink id="497d-ea1e-10b3-3268" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="true"/>
         <categoryLink id="d81b-ac27-ce7e-3045" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
         <categoryLink id="fc7d-a4c3-e838-1714" name="Slann" hidden="false" targetId="5c12-eebd-de21-0b3d" primary="false"/>
       </categoryLinks>
@@ -105,7 +105,7 @@
           <entryLinks>
             <entryLink id="d747-4e1e-b5f2-6966" name="Arcane Items" hidden="false" collective="false" import="true" targetId="4cfd-b3c7-a3ea-68f1" type="selectionEntryGroup"/>
             <entryLink id="16b2-132f-9320-4638" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="bbd0-c163-1cc8-5edf" type="selectionEntryGroup"/>
-            <entryLink id="ee6c-ad79-f907-8a07" name="Talisman" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
+            <entryLink id="ee6c-ad79-f907-8a07" name="Talismans" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
             <entryLink id="994d-8a68-1123-dd6d" name="Plaques" hidden="false" collective="false" import="true" targetId="6150-3dae-687d-6461" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -176,7 +176,7 @@
             <entryLink id="c9d2-7759-5286-0257" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="bbd0-c163-1cc8-5edf" type="selectionEntryGroup"/>
             <entryLink id="8b6d-51ac-7f74-581e" name="Magic Armour" hidden="false" collective="false" import="true" targetId="ad6e-3337-4672-ae7b" type="selectionEntryGroup"/>
             <entryLink id="e072-5393-1bd9-0cdc" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="a2c9-7abf-3316-b089" type="selectionEntryGroup"/>
-            <entryLink id="45c1-2143-017c-5162" name="Talisman" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
+            <entryLink id="45c1-2143-017c-5162" name="Talismans" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -354,7 +354,7 @@
             <entryLink id="56fd-8a43-6c91-35d2" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="bbd0-c163-1cc8-5edf" type="selectionEntryGroup"/>
             <entryLink id="ccc5-cbf2-9018-9a14" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="a2c9-7abf-3316-b089" type="selectionEntryGroup"/>
             <entryLink id="bf44-ed64-d2d6-754f" name="Magic Armour" hidden="false" collective="false" import="true" targetId="ad6e-3337-4672-ae7b" type="selectionEntryGroup"/>
-            <entryLink id="46f6-eb1e-d6e3-ca55" name="Talisman" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
+            <entryLink id="46f6-eb1e-d6e3-ca55" name="Talismans" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -460,7 +460,7 @@
             </selectionEntry>
             <selectionEntry id="e8d1-0a90-6456-6be9" name="Blessed Spawning of Sotek" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="000c-72e5-5d71-0e0c" name="Blesssed Spawning Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
+                <infoLink id="000c-72e5-5d71-0e0c" name="Blesssed Spawning of Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="20"/>
@@ -529,7 +529,7 @@
             <entryLink id="6e50-de12-b070-7ed5" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="bbd0-c163-1cc8-5edf" type="selectionEntryGroup"/>
             <entryLink id="681b-2006-5bfa-39c3" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="a2c9-7abf-3316-b089" type="selectionEntryGroup"/>
             <entryLink id="2c0f-f44b-4755-1555" name="Magic Armour" hidden="false" collective="false" import="true" targetId="ad6e-3337-4672-ae7b" type="selectionEntryGroup"/>
-            <entryLink id="91e3-19c5-5826-076a" name="Talisman" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
+            <entryLink id="91e3-19c5-5826-076a" name="Talismans" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -596,7 +596,7 @@
             <entryLink id="e135-f322-4347-349c" name="Magic Banners" hidden="false" collective="false" import="true" targetId="106e-cbcc-35b6-ec13" type="selectionEntryGroup"/>
           </entryLinks>
         </entryLink>
-        <entryLink id="61a8-de4f-44fa-4bbc" name="Blessed Spawning" hidden="false" collective="false" import="true" targetId="b5f1-cbfb-ba4b-490e" type="selectionEntryGroup">
+        <entryLink id="61a8-de4f-44fa-4bbc" name="Blessed Spawning Characters" hidden="false" collective="false" import="true" targetId="b5f1-cbfb-ba4b-490e" type="selectionEntryGroup">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ecab-0a5c-13aa-ec06" type="max"/>
           </constraints>
@@ -718,7 +718,7 @@
             </selectionEntry>
             <selectionEntry id="5817-3009-2a93-1918" name="Blessed Spawning of Sotek" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="c7fb-ce3d-1fe8-6f32" name="Blesssed Spawning Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
+                <infoLink id="c7fb-ce3d-1fe8-6f32" name="Blesssed Spawning of Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="20"/>
@@ -736,7 +736,7 @@
             <entryLink id="389a-3640-2a0e-c57f" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="bbd0-c163-1cc8-5edf" type="selectionEntryGroup"/>
             <entryLink id="6278-8e18-d46a-d682" name="Magic Armour" hidden="false" collective="false" import="true" targetId="ad6e-3337-4672-ae7b" type="selectionEntryGroup"/>
             <entryLink id="a41e-13a0-3af0-599c" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="a2c9-7abf-3316-b089" type="selectionEntryGroup"/>
-            <entryLink id="24fa-eda6-6540-1a31" name="Talisman" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
+            <entryLink id="24fa-eda6-6540-1a31" name="Talismans" hidden="false" collective="false" import="true" targetId="bf9b-10c2-4821-9fee" type="selectionEntryGroup"/>
             <entryLink id="4293-1445-c8e8-74e8" name="Arcane Items" hidden="false" collective="false" import="true" targetId="4cfd-b3c7-a3ea-68f1" type="selectionEntryGroup"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -770,19 +770,19 @@
       <modifiers>
         <modifier type="set-primary" field="category" value="43cc-fc3f-35a7-8d03">
           <conditions>
-            <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1b0a-45a5-e3be-d837" type="greaterThan"/>
+            <condition field="selections" scope="self" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1b0a-45a5-e3be-d837" type="greaterThan"/>
           </conditions>
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa1a-7509-c515-1b8b" type="equalTo"/>
+                <condition field="selections" scope="self" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa1a-7509-c515-1b8b" type="equalTo"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
         </modifier>
         <modifier type="set-primary" field="category" value="e94b-6a54-8779-cd60">
           <conditions>
-            <condition field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa1a-7509-c515-1b8b" type="greaterThan"/>
+            <condition field="selections" scope="self" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="aa1a-7509-c515-1b8b" type="greaterThan"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -793,7 +793,7 @@
         <infoLink id="9ce7-198a-ff2d-f07c" name="Predatory Fighters" hidden="false" targetId="078a-a419-35aa-3885" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="4e44-1ec9-460f-8c88" name="New CategoryLink" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
+        <categoryLink id="4e44-1ec9-460f-8c88" name="Core" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="5005-7199-18bd-22ca" name="Saurus Warrior" hidden="false" collective="false" import="true" type="model">
@@ -1071,8 +1071,8 @@
         <infoLink id="b217-e047-08dd-43e5" name="Temple Guard" hidden="false" targetId="893b-c80b-3ebc-dce8" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="892f-537f-8afb-9f61" name="New CategoryLink" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
-        <categoryLink id="f8d3-c6ed-fbcd-340d" name="New CategoryLink" hidden="false" targetId="64bf-efb4-9978-26df" primary="false"/>
+        <categoryLink id="892f-537f-8afb-9f61" name="Core" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
+        <categoryLink id="f8d3-c6ed-fbcd-340d" name="Core" hidden="false" targetId="64bf-efb4-9978-26df" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8b1e-9489-241a-4bd6" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1197,7 +1197,7 @@
         <infoLink id="36be-a067-c721-26e6" name="Cold One" hidden="false" targetId="7d3c-1d69-5f1c-711f" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="e1fa-23be-eef6-b518" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="e1fa-23be-eef6-b518" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="6812-f666-0c2b-8708" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1315,7 +1315,7 @@
         <infoLink id="8485-3944-facb-ef4b" name="Kroxigor" hidden="false" targetId="f07e-f05e-ef55-cbd6" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="3ded-20c5-96a5-3f43" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="3ded-20c5-96a5-3f43" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="69f2-3214-1a27-8c24" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1377,7 +1377,7 @@
         <infoLink id="822a-6053-7000-fc01" name="Chameleons" hidden="false" targetId="942f-bcf6-d9a6-97d0" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="5a1e-be3c-4138-cc64" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="5a1e-be3c-4138-cc64" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d4cc-e594-b595-620d" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -1449,8 +1449,8 @@
         <infoLink id="d156-871b-885c-ef01" name="Terradon &amp; Rider" hidden="false" targetId="2204-be0c-a9a8-af3f" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="88b2-61c0-225a-d19d" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
-        <categoryLink id="e645-80c9-3bb4-3609" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="false"/>
+        <categoryLink id="88b2-61c0-225a-d19d" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="e645-80c9-3bb4-3609" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="a71e-8ef5-3fad-db9a" name="Terradon &amp; Brave" hidden="false" collective="false" import="true" type="upgrade">
@@ -1506,7 +1506,7 @@
         <infoLink id="0a49-6b0b-3a2b-61bc" name="Poisoned Attacks" hidden="false" targetId="c42e-9dc4-8229-5abe" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="1cef-6451-c221-efe4" name="New CategoryLink" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
+        <categoryLink id="1cef-6451-c221-efe4" name="Rare" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="235"/>
@@ -1527,7 +1527,7 @@
         <infoLink id="9608-ebb1-572f-635b" name="Skirmishers" hidden="false" targetId="1945-ac89-9cc4-3537" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="e99e-4e6b-347a-7456" name="New CategoryLink" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
+        <categoryLink id="e99e-4e6b-347a-7456" name="Rare" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="081a-94b4-7917-08f3" name="Goad or Prod" hidden="false" collective="false" import="true" type="upgrade">
@@ -1882,7 +1882,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3c3-3c7d-06da-ef22" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="7511-75a2-4a1e-f951" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="7511-75a2-4a1e-f951" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="7b34-257b-48b7-7193" name="Blessed Spawning of Chotec" hidden="false" collective="false" import="true" type="upgrade">
@@ -1929,7 +1929,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8ad7-5675-a6c4-01e6" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="9bda-aebf-f830-d8fe" name="Blesssed Spawning Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
+            <infoLink id="9bda-aebf-f830-d8fe" name="Blesssed Spawning of Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -1942,7 +1942,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1c50-8611-c9e3-8c66" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="eaaf-34f6-0a73-5f30" name="Blesssed Spawning Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
+            <infoLink id="eaaf-34f6-0a73-5f30" name="Blesssed Spawning of Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -1955,7 +1955,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="52ae-877f-c2fd-ac3e" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="4795-b049-2781-d1ae" name="Blesssed Spawning Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
+            <infoLink id="4795-b049-2781-d1ae" name="Blesssed Spawning of Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -1968,7 +1968,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3454-66e2-c5f9-29f9" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="b910-c520-32b4-60a6" name="Blesssed Spawning Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
+            <infoLink id="b910-c520-32b4-60a6" name="Blesssed Spawning of Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="20"/>
@@ -1988,7 +1988,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5b18-8073-2d5c-d46f" type="max"/>
       </constraints>
       <categoryLinks>
-        <categoryLink id="dd97-8afd-21ca-7a65" name="New CategoryLink" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
+        <categoryLink id="dd97-8afd-21ca-7a65" name="Rare" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="cbde-89d9-e65b-45c8" name="Blessed Spawning of Chotec" hidden="false" collective="false" import="true" type="upgrade">
@@ -2035,7 +2035,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c4e4-558b-3a74-4967" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="deb9-9d36-7313-92d8" name="Blesssed Spawning Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
+            <infoLink id="deb9-9d36-7313-92d8" name="Blesssed Spawning of Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -2048,7 +2048,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1002-4d96-068b-7ead" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="6389-402e-20b3-16f0" name="Blesssed Spawning Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
+            <infoLink id="6389-402e-20b3-16f0" name="Blesssed Spawning of Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -2061,7 +2061,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="37cc-127f-12b0-af34" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="f85f-43f5-3389-6f02" name="Blesssed Spawning Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
+            <infoLink id="f85f-43f5-3389-6f02" name="Blesssed Spawning of Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="30"/>
@@ -2074,7 +2074,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f4a-b95d-ecfa-0d5b" type="max"/>
           </constraints>
           <infoLinks>
-            <infoLink id="f80e-e893-9887-9331" name="Blesssed Spawning Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
+            <infoLink id="f80e-e893-9887-9331" name="Blesssed Spawning of Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="20"/>
@@ -2133,7 +2133,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd88-34f6-3d3d-c06f" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="c347-38fe-4073-6feb" name="Blesssed Spawning Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
+        <infoLink id="c347-38fe-4073-6feb" name="Blesssed Spawning of Quetzl" hidden="false" targetId="1c8b-3c91-c79e-853e" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -2146,7 +2146,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="baa2-75a6-8026-683f" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="7c0f-728c-c2a1-a7ea" name="Blesssed Spawning Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
+        <infoLink id="7c0f-728c-c2a1-a7ea" name="Blesssed Spawning of Sotek" hidden="false" targetId="d93f-c967-c856-d295" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -2159,7 +2159,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6a0e-bb39-c743-c8e5" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="d2d2-4505-d259-19da" name="Blesssed Spawning Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
+        <infoLink id="d2d2-4505-d259-19da" name="Blesssed Spawning of Tepok" hidden="false" targetId="4fda-2623-4a50-2dee" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -2172,7 +2172,7 @@ The Hand of Gods has a range of 8&quot; and strikes every enemy unit within line
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b730-4cce-ee17-d812" type="max"/>
       </constraints>
       <infoLinks>
-        <infoLink id="9539-0c49-fd0c-007d" name="Blesssed Spawning Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
+        <infoLink id="9539-0c49-fd0c-007d" name="Blesssed Spawning of Tlazcotl" hidden="false" targetId="4995-80be-43e2-c907" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -2361,7 +2361,7 @@ This may be used with the exact sam effects as a Dispel Scroll. In addtion, all 
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6ab1-08b8-4136-1e71" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fa7f-868d-687c-3d3d" name="Shield of the Mirrored Pool" publicationId="3a49-dd2e-fcaa-cdb1" page="53." hidden="false" typeId="f681-9937-db53-f1d8" typeName="Armour">
+            <profile id="fa7f-868d-687c-3d3d" name="Shield of the Mirrored Pool" publicationId="3a49-dd2e-fcaa-cdb1" page="53" hidden="false" typeId="f681-9937-db53-f1d8" typeName="Armour">
               <characteristics>
                 <characteristic name="Saving Throw Modifier" typeId="b600-e1ed-0765-27c1">+1 to armour save</characteristic>
                 <characteristic name="Special rules" typeId="42c3-68ab-cfa5-203e">Any magic missile that strikes the bearer or any unit he is with is deflected on the roll of a 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled.</characteristic>

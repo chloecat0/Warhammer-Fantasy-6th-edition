@@ -56,10 +56,12 @@
         <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1077-7379-f142-f382" type="min"/>
       </constraints>
     </categoryEntry>
+    <categoryEntry name="Configuration" id="de11-a357-3ba6-675f" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="7d9d-6c8d-4ea0-b7ad" name="Standard" hidden="false">
       <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="9964-eb61-1422-9b6c" targetId="de11-a357-3ba6-675f" type="categoryEntry"/>
         <categoryLink id="223a-0bf6-f992-7db0" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false">
           <modifierGroups>
             <modifierGroup>

@@ -1810,6 +1810,7 @@ The Bell has no special power until Skrolk is wounded. Then at the end of each p
         <categoryLink id="d8ba-d074-5271-5a8b" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="a2b9-9937-8a13-ff56" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="f0eb-3690-cac2-ed87" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
+        <categoryLink targetId="7a1c-d611-c2dc-def1" id="8f08-d876-4aac-c346" primary="false" name="Characters"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="400"/>
@@ -2339,6 +2340,63 @@ has the Killing Blow special rule.</description>
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry id="cbfd-32bf-2926-0d92" name="Throt the Unclean" hidden="false" collective="false" import="true" type="unit">
+      <infoLinks>
+        <infoLink id="9e8a-4753-11dc-e9ee" name="Throt" hidden="false" targetId="80a5-853e-f030-8df3" type="profile"/>
+        <infoLink name="Warpstone-Fuelled Constitution" id="0064-fc38-b7c9-b95c" hidden="false" type="rule" targetId="59c1-8a35-5a25-ebe1"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="2396-9b82-6903-66fa" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
+        <categoryLink id="cfee-3328-ec91-f899" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
+        <categoryLink targetId="d024-d25b-a9b4-73b6" id="55af-f4a7-8d12-645a" primary="false" name="Lord"/>
+        <categoryLink targetId="0644-bfcd-32c2-21dc" id="b415-82ad-ab51-a3a7" primary="true" name="Special Characters"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="ef85-29d2-e359-1d1f" name="General" hidden="false" collective="false" import="true" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="285"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+      </costs>
+      <rules>
+        <rule name="Master Controller" id="0d69-5336-e0a3-49fd" hidden="false" publicationId="f804-741f-2593-2dec" page="69">
+          <description>Any Clan Moulder unit within 6&quot; of Throt may re-roll any failed Psychology test. In addition to this, if Throt is not your army&apos;s General, any Clan Moulder unit within 6&quot; of him may use his Leadership for any Leadership test they take.</description>
+        </rule>
+        <rule name="Dominator" id="02e6-7259-a78e-9b43" hidden="false" publicationId="f804-741f-2593-2dec" page="69">
+          <description>When Throt is in the rear ranks of a unit of Giant Rats or Rat Ogres, he can make four Strength 4 Attacks with his whip instead of one normal Strength 5 Attack. Note that attacks with the whip do NOT benefit from the Killing Blow ability.</description>
+        </rule>
+        <rule name="Ravening Hunger" id="3054-1662-29ef-da77" hidden="false" publicationId="f804-741f-2593-2dec" page="69">
+          <description>Throt and any unit he has joined may never pursue a fleeing enemy they have broken in combat, as Throt stop to feed on the corpses of the fallen.</description>
+        </rule>
+      </rules>
+      <infoGroups>
+        <infoGroup name="Magic Items" id="c6be-5097-a952-23ca" hidden="false">
+          <infoLinks>
+            <infoLink name="Warpstone Charm" id="2a6a-e6a1-6250-bd21" hidden="false" targetId="aea9-059b-a9f0-79f7" type="rule"/>
+          </infoLinks>
+          <rules>
+            <rule name="Creature-killer" id="4353-41c3-073e-b2b3" hidden="false">
+              <description>The Creature-killer gives Throt the Killing Blow special ability. However, this magical weapon may also be used to deliver a Killing Blow to creatures the size of an Ogre, such as Minotaurs, Trolls and Kroxigors. It may not be used on monsters larger than Ogres, such as Dragons, or against Swarms. 
+The Creature-killer requires two hands to use, but as Throt has three hands, he may still use the weapon and his hand weapon or whip to gain one extra Attack. This gives him four Attacks with the Creature-killer and one normal Attack which does not have the Killing Blow ability.</description>
+            </rule>
+          </rules>
+        </infoGroup>
+        <infoGroup name="Weapons" id="8afc-7ab9-576a-7e35" hidden="false">
+          <infoLinks>
+            <infoLink name="Killing Blow" id="5279-3744-1c88-3c32" hidden="false" type="rule" targetId="e08e-1c7b-a667-f05b"/>
+            <infoLink name="Hand Weapon" id="da7d-1a28-3679-572a" hidden="false" targetId="5556-38ea-b278-4a8f" type="profile"/>
+            <infoLink name="Whip" id="f0b3-0462-ceb0-326a" hidden="false" targetId="37b1-7d4f-c4af-0c2a" type="rule"/>
+          </infoLinks>
+          <rules>
+            <rule name="Creature-killer" id="18be-8db0-d443-a4a6" hidden="false">
+              <description>The Creature-killer gives Throt the Killing Blow special ability. However, this magical weapon may also be used to deliver a Killing Blow to creatures the size of an Ogre, such as Minotaurs, Trolls and Kroxigors. It may not be used on monsters larger than Ogres, such as Dragons, or against Swarms. 
+The Creature-killer requires two hands to use, but as Throt has three hands, he may still use the weapon and his hand weapon or whip to gain one extra Attack. This gives him four Attacks with the Creature-killer and one normal Attack which does not have the Killing Blow ability.</description>
+            </rule>
+          </rules>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -4130,6 +4188,19 @@ Armour Save: 5+</comment>
         <characteristic name="I" typeId="dfff-363e-f72a-5a59">4</characteristic>
         <characteristic name="A" typeId="6b9f-c8fe-8998-27e3">1</characteristic>
         <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">6</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="80a5-853e-f030-8df3" name="Throt" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile">
+      <characteristics>
+        <characteristic name="Mv" typeId="0e92-d038-82bf-fb41">6</characteristic>
+        <characteristic name="WS" typeId="f95b-da01-0578-3bdc">6</characteristic>
+        <characteristic name="BS" typeId="4a8b-0c8e-3daf-7901">3</characteristic>
+        <characteristic name="S" typeId="b690-4bc0-bb73-267b">5</characteristic>
+        <characteristic name="T" typeId="8712-f56f-5b22-a720">5</characteristic>
+        <characteristic name="W" typeId="253a-9b00-4fde-8ac2">3</characteristic>
+        <characteristic name="I" typeId="dfff-363e-f72a-5a59">7</characteristic>
+        <characteristic name="A" typeId="6b9f-c8fe-8998-27e3">4</characteristic>
+        <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">7</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

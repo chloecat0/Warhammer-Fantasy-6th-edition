@@ -61,7 +61,7 @@
   <forceEntries>
     <forceEntry id="7d9d-6c8d-4ea0-b7ad" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink name="Configuration" hidden="false" id="9964-eb61-1422-9b6c" targetId="de11-a357-3ba6-675f" type="categoryEntry"/>
+        <categoryLink name="Configuration" hidden="false" id="9964-eb61-1422-9b6c" targetId="de11-a357-3ba6-675f"/>
         <categoryLink id="223a-0bf6-f992-7db0" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false">
           <modifierGroups>
             <modifierGroup>

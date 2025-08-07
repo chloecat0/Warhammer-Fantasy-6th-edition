@@ -2398,6 +2398,131 @@ The Creature-killer requires two hands to use, but as Throt has three hands, he 
         </infoGroup>
       </infoGroups>
     </selectionEntry>
+    <selectionEntry id="6c69-de13-8299-f8e1" name="Grey Seer Thanquol" hidden="false" collective="false" import="true" type="unit" publicationId="f804-741f-2593-2dec" page="66">
+      <infoLinks>
+        <infoLink id="a7cd-862b-39e1-ebbd" name="Grey Seer Thanquol" hidden="false" targetId="6f30-1fb7-7451-ab84" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="4800-dc7a-2151-62a7" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
+        <categoryLink id="e64c-925e-fe81-eb89" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
+        <categoryLink targetId="0644-bfcd-32c2-21dc" id="27bc-3d0e-2b7f-bdd3" primary="true" name="Special Characters"/>
+        <categoryLink targetId="c16b-f319-2c62-2c12" id="d435-6d19-9c4c-a34e" primary="false" name="Heroes"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="aab9-784f-0907-33c4" name="Level 4 magic" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80d8-93a4-6bdb-4aea" type="min"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ec87-41eb-1461-d0d4" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+            <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
+            <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Boneripper" hidden="false" id="18a5-31f6-a766-b6d9">
+          <profiles>
+            <profile name="Boneripper Armour" typeId="f681-9937-db53-f1d8" typeName="Armour" hidden="false" id="7f4c-22cb-e08f-b9aa">
+              <characteristics>
+                <characteristic name="Saving Throw Modifier" typeId="b600-e1ed-0765-27c1">4+</characteristic>
+                <characteristic name="Special rules" typeId="42c3-68ab-cfa5-203e"/>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Boneripper" id="d9ac-8b6c-858d-e76e" hidden="false" type="profile" targetId="c5fb-6c59-aad1-6f5b"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d2c-f889-4efe-0115"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ad5-c867-06be-8081"/>
+          </constraints>
+          <rules>
+            <rule name="Automaton" id="e877-80f8-715f-fa4c" hidden="false">
+              <description>Boneripper is Unbreakable and immune to the effects of poison.</description>
+            </rule>
+            <rule name="Warpfire Thrower" id="24d8-2d37-158f-eb14" hidden="false">
+              <description>A small version of the dreaded warpfire thrower has been built in place of one of Boneripper&apos;s arms. This is treated as a breath weapon in all respects. When firing, place the flame template with its narrow end in contact with the weapon&apos;s muzzle. Models hit by the template suffer a Strength 4 hit. Units suffering any casualties must take a Panic test.</description>
+            </rule>
+            <rule name="Pawn" id="099e-c1d9-2732-c790" hidden="false">
+              <description>Boneripper must be deployed within 6&quot; of Thanquol at the beginning of the game. After that Boneripper is free to move independently (in reality he is telepathically controlled by Thanquol) and will count as a seperate unit of a Rat Ogre for the rest of the game (he is worth 75 Victory points). Boneripper can never join units. If Thanquol is killed or flees the table, Boneripper switches off and is immediately removed from the table, counting as a casualty. At the beginning of each of the turns in which the Skaven player wants to do anything with Boneripper (move, shoot, fight in close combat) the player must roll a D6 to activate the automaton. On a roll of 2-6 everything is well and Boneripper acts as normal. On the roll of a 1, Boneripper suffers a malfunction - roll another dice and refer to the Malfunction chart to find out what&apos;s gone wrong.</description>
+            </rule>
+            <rule name="Malfunction" id="9d59-20a6-dfb1-85d2" hidden="false">
+              <description>Boneripper runs amok!
+D6 Result
+1-3 Boneripper does nothing this turn and is hit automatically if engaged in close combat. The opponent can control Boneripper in his next turn, exactly as if it was one of his models. At the beginning of the next turn, control returns to the Skaven player.
+4-6 Boneripper does nothing this turn and is hit automatically if engaged in close combat.</description>
+            </rule>
+            <rule name="Safety Valve" id="a9da-6641-660e-d424" hidden="false">
+              <description>Before giving Boneripper to Thanquol as a gift, the Warlock Engineers made sure that their creation couldn&apos;t be turned against them in the future. Boneripper cannot charge/overrun if the charge/overrun would take him into base contact with a Skaven belonging to Clan Skryre. He can never pursue a unit containing one of more members of Clan Skryre. He can never direct any of his close combat attacks against members of Clan Skryre. Also, the template of his warpfire thrower cannot be placed so that it could hit a member of Clan Skryre.</description>
+            </rule>
+            <rule name="Fear" id="95ca-7501-cbd5-20e3" hidden="false">
+              <description>Boneripper causes Fear</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Amulet of the Horned One" hidden="false" id="68c5-e42a-16a8-ac17" page="66" publicationId="f804-741f-2593-2dec">
+          <rules>
+            <rule name="Amulet of the Horned One" id="8d9b-edbf-bc64-d0d0" hidden="false">
+              <description>The pure warpstone talisman worn by Thanquol is a powerful defensive item as well as a badge of office. At the beginning of each of his turns, the player controlling Thanquol must roll a dice. On a 1 nothing happens, on a 2-6 Thanquol recovers one of the Wounds he previously lost during the game.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a507-0567-8cb4-80a9"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="faae-26e7-dd45-b0ab"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Staff of the Horned One" hidden="false" id="09ce-aa3a-5552-c2c7" publicationId="f804-741f-2593-2dec" page="66">
+          <rules>
+            <rule name="Staff of the Horned One" id="5f60-a757-277a-a12e" hidden="false">
+              <description>Thanquol&apos;s staff marks him out as one who speaks for the Horned Rat and also gives him one extra spell. Therefore the Grey Seer knows five out of the six Skaven spells.</description>
+            </rule>
+          </rules>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="40ac-af97-013c-6093"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f94-9f4c-b710-dd06"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="35c5-d67a-cd26-ad8f" name="Screaming Bell" hidden="false" collective="false" import="true" targetId="5704-24af-4bb3-93b3" type="selectionEntry">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="200"/>
+          </costs>
+        </entryLink>
+        <entryLink id="7a8c-b45b-6634-d491" name="General" hidden="false" collective="false" import="true" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+        <entryLink import="true" name="Warpstone Token" hidden="false" id="8b9c-6cde-92c7-93d1" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="13">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="13" field="selections" scope="parent" shared="true" id="b01a-ade0-54f8-939b"/>
+            <constraint type="max" value="13" field="selections" scope="parent" shared="true" id="c38c-6c4a-ccb2-e765"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Sword" hidden="false" id="1760-4f3d-f469-6fda" collective="false" targetId="abdb-bbd0-41b2-5dff" type="selectionEntry">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="739d-3e47-5dd0-cb65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b39-c01e-f3a0-b352" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="560"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="4"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
+      </costs>
+      <rules>
+        <rule name="Blessed by the Horned Rat" id="b27d-550c-8a54-4131" hidden="false">
+          <description>Thanquol seems to enjoy the favour of the Horned One, always escaping death in the direst situations. To simulate this he has a Ward save of 4+. In addition, when Thanquol is inside a unit, for every wound saved by his Ward save, one Skaven in base contact with the Grey Seer (Skaven player&apos;s choice) will be wounded in his place. Resolve the effects of the wound as normal against the unfortunate Skaven, including normal armour saves, etc.</description>
+        </rule>
+        <rule name="Warpstone Addiction" id="a067-c9e6-1377-585d" hidden="false">
+          <description>When Thanquol rolls a 1 to cast a spell with any Power dice generated by a Warpstone Token, he can re-roll the dice, but the second result stands.</description>
+        </rule>
+        <rule name="Arch-rivals" id="4183-ed3d-776e-58e7" hidden="false">
+          <description>Thanquol Hates and Fears Gotrek Gurnisson and Felix Jaeger.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry id="5dcc-e6e0-089a-d0ae" name="Warplock Pistol" hidden="false" collective="false" import="true" type="upgrade">
@@ -4201,6 +4326,32 @@ Armour Save: 5+</comment>
         <characteristic name="I" typeId="dfff-363e-f72a-5a59">7</characteristic>
         <characteristic name="A" typeId="6b9f-c8fe-8998-27e3">4</characteristic>
         <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="6f30-1fb7-7451-ab84" name="Grey Seer Thanquol" publicationId="f804-741f-2593-2dec" page="66" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile">
+      <characteristics>
+        <characteristic name="Mv" typeId="0e92-d038-82bf-fb41">5</characteristic>
+        <characteristic name="WS" typeId="f95b-da01-0578-3bdc">3</characteristic>
+        <characteristic name="BS" typeId="4a8b-0c8e-3daf-7901">3</characteristic>
+        <characteristic name="S" typeId="b690-4bc0-bb73-267b">3</characteristic>
+        <characteristic name="T" typeId="8712-f56f-5b22-a720">4</characteristic>
+        <characteristic name="W" typeId="253a-9b00-4fde-8ac2">3</characteristic>
+        <characteristic name="I" typeId="dfff-363e-f72a-5a59">6</characteristic>
+        <characteristic name="A" typeId="6b9f-c8fe-8998-27e3">1</characteristic>
+        <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c5fb-6c59-aad1-6f5b" name="Boneripper" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile" publicationId="f804-741f-2593-2dec" page="67">
+      <characteristics>
+        <characteristic name="Mv" typeId="0e92-d038-82bf-fb41">5</characteristic>
+        <characteristic name="WS" typeId="f95b-da01-0578-3bdc">3</characteristic>
+        <characteristic name="BS" typeId="4a8b-0c8e-3daf-7901">0</characteristic>
+        <characteristic name="S" typeId="b690-4bc0-bb73-267b">5</characteristic>
+        <characteristic name="T" typeId="8712-f56f-5b22-a720">5</characteristic>
+        <characteristic name="W" typeId="253a-9b00-4fde-8ac2">3</characteristic>
+        <characteristic name="I" typeId="dfff-363e-f72a-5a59">2</characteristic>
+        <characteristic name="A" typeId="6b9f-c8fe-8998-27e3">3</characteristic>
+        <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">10</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

@@ -126,6 +126,9 @@
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -201,6 +204,8 @@
                   <conditions>
                     <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                     <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -321,20 +326,8 @@
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="17ff-670d-ab64-5724" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="99" field="selections" scope="parent" shared="true" id="17ff-670d-ab64-5724" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="99" field="17ff-670d-ab64-5724">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
@@ -344,12 +337,15 @@
               </repeats>
             </modifier>
             <modifier type="remove" value="736a-30de-d314-9262" field="category"/>
+            <modifier type="set" value="0" field="17ff-670d-ab64-5724"/>
           </modifiers>
           <conditionGroups>
             <conditionGroup type="or">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -637,6 +633,19 @@
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="fffc-5182-dcea-0e63" name="Warlock Engineer" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -726,6 +735,8 @@
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -796,6 +807,8 @@
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -950,9 +963,15 @@
                 <repeat field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="1" field="a6f2-3707-07e6-806a">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a9b2-d6e5-c352-0c81" type="max"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a6f2-3707-07e6-806a"/>
           </constraints>
           <infoLinks>
             <infoLink id="f2d6-befc-fb71-71fa" name="Poisoned Attacks" hidden="false" targetId="2738-27d5-f4af-4722" type="rule"/>
@@ -977,6 +996,8 @@
                   <conditions>
                     <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                     <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                    <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -1107,6 +1128,22 @@
             </conditionGroup>
           </conditionGroups>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="64bf-efb4-9978-26df" field="category"/>
+            <modifier type="add" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="set-primary" value="43cc-fc3f-35a7-8d03" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntry>
     <selectionEntry id="f270-d721-efc6-67f9" name="Night Runners" hidden="false" collective="false" import="true" type="unit">
@@ -1128,6 +1165,15 @@
       <infoLinks>
         <infoLink id="da53-b08f-3929-52a4" name="Night Runner" hidden="false" targetId="4a48-8a95-32b5-d0a7" type="profile"/>
         <infoLink id="9e3f-5138-2745-9cce" name="Skirmishers" hidden="false" targetId="1945-ac89-9cc4-3537" type="rule"/>
+        <infoLink name="Mainstay Unit" id="7f25-7552-bc90-4922" hidden="false" targetId="8268-5855-2a56-fec3" type="rule">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a393-fdc6-5348-603a" name="Core" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
@@ -1214,8 +1260,23 @@
             <modifier type="add" value="43cc-fc3f-35a7-8d03" field="category"/>
             <modifier type="set-primary" value="43cc-fc3f-35a7-8d03" field="category"/>
           </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="2493-56dd-6941-62c0"/>
+            <modifier type="add" value="736a-30de-d314-9262" field="category"/>
+          </modifiers>
           <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -1335,6 +1396,14 @@
             <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="1" field="ab9a-72af-9a50-514e">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="736a-30de-d314-9262" shared="true" roundUp="false" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </repeats>
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ab9a-72af-9a50-514e" type="max"/>
@@ -1386,9 +1455,15 @@
             <modifier type="add" value="e94b-6a54-8779-cd60" field="category"/>
             <modifier type="set-primary" value="e94b-6a54-8779-cd60" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -1463,8 +1538,24 @@
             <modifier type="add" value="e94b-6a54-8779-cd60" field="category"/>
             <modifier type="set-primary" value="e94b-6a54-8779-cd60" field="category"/>
           </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="add" value="64bf-efb4-9978-26df" field="category"/>
+            <modifier type="set-primary" value="64bf-efb4-9978-26df" field="category"/>
+          </modifiers>
           <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -1488,6 +1579,15 @@
       <infoLinks>
         <infoLink id="c0c5-a9f2-aee3-00d1" name="Plague Monk" hidden="false" targetId="411f-91b5-68e1-76c3" type="profile"/>
         <infoLink id="f234-4a7f-5f47-98b2" name="Frenzy" hidden="false" targetId="ab5d-dda1-bffc-a027" type="rule"/>
+        <infoLink name="Mainstay Unit" id="0673-e043-ecb4-2dbe" hidden="false" targetId="8268-5855-2a56-fec3" type="rule">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f899-fc1e-7e4c-39db" name="Special" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
@@ -1574,8 +1674,33 @@
             <modifier type="add" value="e94b-6a54-8779-cd60" field="category"/>
             <modifier type="set-primary" value="e94b-6a54-8779-cd60" field="category"/>
           </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="99" field="4b8b-187b-f8d6-3640"/>
+            <modifier type="add" value="736a-30de-d314-9262" field="category"/>
+          </modifiers>
           <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="add" value="64bf-efb4-9978-26df" field="category"/>
+            <modifier type="set-primary" value="64bf-efb4-9978-26df" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -1668,6 +1793,22 @@
             <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifierGroup>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="add" value="e94b-6a54-8779-cd60" field="category"/>
+            <modifier type="set-primary" value="e94b-6a54-8779-cd60" field="category"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
       </modifierGroups>
     </selectionEntry>
     <selectionEntry id="555e-b065-5fe6-2d23" name="Plague Censer Bearers" hidden="false" collective="false" import="true" type="unit">
@@ -1722,6 +1863,18 @@
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="e94b-6a54-8779-cd60" field="category"/>
+            <modifier type="add" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="set-primary" value="43cc-fc3f-35a7-8d03" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="5a46-c355-2f6d-6430" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
@@ -1743,6 +1896,18 @@
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="e94b-6a54-8779-cd60" field="category"/>
+            <modifier type="add" value="43cc-fc3f-35a7-8d03" field="category"/>
+            <modifier type="set-primary" value="43cc-fc3f-35a7-8d03" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="2286-a8f2-9229-8303" name="Dogs Of War" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -2274,9 +2439,15 @@ has the Killing Blow special rule.</description>
             <modifier type="add" value="e94b-6a54-8779-cd60" field="category"/>
             <modifier type="set-primary" value="e94b-6a54-8779-cd60" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="0118-9ec1-4d4f-7abc" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -3858,9 +4029,6 @@ D6 Result
               </constraints>
             </entryLink>
             <entryLink id="b7a3-1f49-5890-c4ed" name="Upgraded Warp-Energy Condenser" hidden="false" collective="false" import="true" targetId="ecc4-6c15-dc02-7c0a" type="selectionEntry" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="10"/>
-              </costs>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7395-a2c7-7976-3478"/>
               </constraints>
@@ -3974,6 +4142,8 @@ D6 Result
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="e209-4b10-cf38-2d1a" shared="true" includeChildSelections="true"/>
                 <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="b9e2-b3c1-cbcd-a90e" shared="true" includeChildSelections="true"/>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="6efb-35cd-e53c-6ab5" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>

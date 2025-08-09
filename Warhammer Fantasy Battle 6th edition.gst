@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6d8e-38d9-3c69-febf" name="Warhammer Fantasy Battle 6th edition" revision="9" battleScribeVersion="2.03" authorName="Ergo Fargo" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
+<gameSystem id="6d8e-38d9-3c69-febf" name="Warhammer Fantasy Battle 6th edition" revision="10" battleScribeVersion="2.03" authorName="Ergo Fargo" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem">
   <publications>
     <publication id="315e-e3c4-08af-fd51" name="BRB"/>
+    <publication name="Github" id="2fac-bc4f-7388-fbc1" hidden="false" publisherUrl="https://github.com/vflam/Warhammer-Fantasy-6th-edition"/>
   </publications>
   <costTypes>
     <costType id="ecfa-8486-4f6c-c249" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -62,6 +63,7 @@
     <forceEntry id="7d9d-6c8d-4ea0-b7ad" name="Standard" hidden="false">
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="9964-eb61-1422-9b6c" targetId="de11-a357-3ba6-675f"/>
+        <categoryLink id="30d2-fdcf-80db-31b5" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="false"/>
         <categoryLink id="223a-0bf6-f992-7db0" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false">
           <modifierGroups>
             <modifierGroup>
@@ -249,7 +251,6 @@
             <constraint field="selections" scope="parent" value="-1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9ecc-0180-3f98-d6c2" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="30d2-fdcf-80db-31b5" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>

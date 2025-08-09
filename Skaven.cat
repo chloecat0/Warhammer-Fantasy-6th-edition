@@ -7,7 +7,6 @@
     </publication>
     <publication id="3305-568f-80f2-eb25" name="Skaven Special Characters" shortName="specialcharacters" publisher="skavencharacters.pdf" publisherUrl="http://rhonono.chez.com/skavencharacters.pdf"/>
     <publication name="White Dwarf #311" id="77fc-8c88-6486-6437" hidden="false"/>
-    <publication name="Github" id="aec4-68e4-9b9f-de2c" hidden="false" publisherUrl="https://github.com/chloecat0/Warhammer-Fantasy-6th-edition" shortName="chloecat0/Warhammer-Fantasy-6th-edition"/>
   </publications>
   <categoryEntries>
     <categoryEntry id="736a-30de-d314-9262" name="Mainstay" hidden="false"/>

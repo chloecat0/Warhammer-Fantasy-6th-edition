@@ -2144,7 +2144,6 @@ Taking a Vermin Lord counts as taking a Lord, a Hero choice and a Rare slot. It 
         <infoLink id="1c34-5e2b-97b4-846e" name="Immune to Psychology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink id="df65-4e84-b944-9d19" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="43bc-fac4-04d1-4ebc" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="4437-ec59-ae84-f7f9" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
         <categoryLink id="70ab-62d9-cada-e777" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
@@ -2155,6 +2154,9 @@ Taking a Vermin Lord counts as taking a Lord, a Hero choice and a Rare slot. It 
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="4"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="5604-a044-bc8b-054f" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="dced-72e6-e138-65c5" name="Lord Skrolk" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -2214,7 +2216,6 @@ The Bell has no special power until Skrolk is wounded. Then at the end of each p
       <categoryLinks>
         <categoryLink id="8d76-d023-fc17-7f76" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="true"/>
         <categoryLink id="fa68-1811-7b31-2a1f" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="false"/>
-        <categoryLink id="d8ba-d074-5271-5a8b" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="a2b9-9937-8a13-ff56" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="f0eb-3690-cac2-ed87" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
         <categoryLink targetId="7a1c-d611-c2dc-def1" id="8f08-d876-4aac-c346" primary="false" name="Characters"/>
@@ -2224,6 +2225,9 @@ The Bell has no special power until Skrolk is wounded. Then at the end of each p
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="a52e-83d9-1d15-cf5b" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="2b8d-1021-fc97-beb9" name="Deathmaster Snikch" publicationId="3305-568f-80f2-eb25" page="6" hidden="false" collective="false" import="true" type="upgrade">
       <comment>Chief Assassin of Clan Eshin</comment>
@@ -2270,7 +2274,6 @@ has the Killing Blow special rule.</description>
       </infoGroups>
       <categoryLinks>
         <categoryLink id="b6c5-de4f-eb4a-2ee1" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="true"/>
-        <categoryLink id="00d3-fde4-728c-4071" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="7b39-9226-18b5-3905" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="4db7-aba0-62b1-e1ec" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
         <categoryLink id="ba70-8ce8-f3d6-8aeb" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
@@ -2280,6 +2283,9 @@ has the Killing Blow special rule.</description>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="7072-87da-30c3-cf55" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="8413-595f-3c4c-c6f7" name="Ikit Claw" hidden="false" collective="false" import="true" type="upgrade">
       <comment>Your army may include Ikit Claw, the emissary of Lord Morskittar, one of the infamous Lords of Decay. If Ikit Claw is your army General you must spend 25% of your points on Clan Skryre’s troops.</comment>
@@ -2339,7 +2345,6 @@ has the Killing Blow special rule.</description>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1fce-6d04-4fec-de85" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="true"/>
-        <categoryLink id="8f5d-356a-c2bc-122f" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="ae52-3537-f3cb-4b0e" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="82d1-f152-314b-f42f" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
         <categoryLink id="267e-7c9e-b429-5011" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
@@ -2349,6 +2354,9 @@ has the Killing Blow special rule.</description>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="4"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="2707-f858-bf74-3373" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="e18e-22f9-4c86-c1fc" name="Warlord Queek Head-Taker" publicationId="3305-568f-80f2-eb25" page="4" hidden="false" collective="false" import="true" type="upgrade">
       <profiles>
@@ -2398,7 +2406,6 @@ has the Killing Blow special rule.</description>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2476-363c-06b5-9a39" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="true"/>
-        <categoryLink id="effa-3139-de91-79e2" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
         <categoryLink id="615d-b9b8-4b18-3008" name="Heroes" hidden="false" targetId="c16b-f319-2c62-2c12" primary="false"/>
         <categoryLink id="7a7c-4681-9b8c-cd25" name="Lord" hidden="false" targetId="d024-d25b-a9b4-73b6" primary="false"/>
         <categoryLink id="54af-ba9e-de79-ed9a" name="Characters" hidden="false" targetId="7a1c-d611-c2dc-def1" primary="false"/>
@@ -2408,6 +2415,9 @@ has the Killing Blow special rule.</description>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="c83b-f98d-f341-beea" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="a711-0f9a-24d9-acd4" name="Gutter Runners" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -6717,7 +6727,7 @@ The  dice is added to the player&apos;s pool.</description>
 Hidden Assassins are not placed on the table but are assumed to move with the unit they accompany. At the start of the game, note down which unit they are hidden in. If the unit is wiped out or flees off the table before the Assassin is revealed then the Assassin is lost and Victory points are scored as normal. Before he&apos;s revealed there is no other way he can be harmed.
 Hidden Assassins may be revealed at the beginning of any of your turns or at the start of any Close Combat phase. The player declares that his unit contains an Assassin and places the model amongst the ranks where it can fight, displacing a normal rank•and•file model (not a character, champion, musician or standard bearer) to the rearmost rank. If there are no such models in the front rank, the Assassin is placed in the second rank until there is enough room for him in the first rank. Assassins always strike first in the round of close combat they are revealed, even against chargers. If an enemy model is also entitled to always strike first, the model with higher Initiative strikes first (roll a D6 if they have equal Initiative).</description>
     </rule>
-    <rule id="b5f4-d830-c4ce-5a5f" name="Leadership" publicationId="f804-741f-2593-2dec" page="18" hidden="false" noindex="true">
+    <rule id="b5f4-d830-c4ce-5a5f" name="Leadership" publicationId="f804-741f-2593-2dec" page="18" hidden="false" noindex="false">
       <description>Units in a Skaven army can never use an 
 Assassin&apos;s Leadership, and an Assassin cannot be the 
 army&apos;s General (therefore your army must include at

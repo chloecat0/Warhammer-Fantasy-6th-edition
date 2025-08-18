@@ -488,7 +488,7 @@
     </selectionEntry>
     <selectionEntry id="104f-5817-4bda-9382" name="Spear Infantry" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="3fbf-2e63-d6b2-91e9" name="Spears (Infantry)" hidden="false" targetId="222b-1e29-9d24-09d7" type="profile"/>
+        <infoLink id="3fbf-2e63-d6b2-91e9" name="Spear (Infantry)" hidden="false" targetId="222b-1e29-9d24-09d7" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -506,9 +506,9 @@
         <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f920-04d5-06c0-c2c9" name="Long Bow" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="f920-04d5-06c0-c2c9" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="bc72-2992-eb53-aaa9" name="Long Bow" hidden="false" targetId="67c1-cca3-76a7-0667" type="profile"/>
+        <infoLink id="bc72-2992-eb53-aaa9" name="Longbow" hidden="false" targetId="67c1-cca3-76a7-0667" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -516,9 +516,9 @@
         <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3428-8f18-865a-44cd" name="Short Bow" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="3428-8f18-865a-44cd" name="Shortbow" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="e7a8-64ce-c0d4-68d6" name="Short Bow" hidden="false" targetId="5e53-1e3a-3e8e-22b2" type="profile"/>
+        <infoLink id="e7a8-64ce-c0d4-68d6" name="Shortbow" hidden="false" targetId="5e53-1e3a-3e8e-22b2" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -587,9 +587,9 @@
         <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="6c61-37b0-5fa6-c20c" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" type="upgrade">
+    <selectionEntry id="6c61-37b0-5fa6-c20c" name="Throwing Star/Knife" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
-        <infoLink id="d76f-ae3e-98ae-7a6d" name="Throwing Star/ Knife" hidden="false" targetId="9c9b-f589-846f-c1d8" type="profile"/>
+        <infoLink id="d76f-ae3e-98ae-7a6d" name="Throwing Star/Knife" hidden="false" targetId="9c9b-f589-846f-c1d8" type="profile"/>
         <infoLink id="160d-d464-ad1f-b955" name="Thrown Weapons" hidden="false" targetId="eecc-4ed0-db8a-f6dc" type="rule"/>
       </infoLinks>
       <costs>
@@ -614,6 +614,9 @@
         <cost name="Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Morning Star" id="a0ab-84a6-458f-4523" hidden="false" type="profile" targetId="929d-16ed-c03a-8d1c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="bd00-7ec3-0e5b-0d52" name="Brace Of Pistols" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
@@ -1374,6 +1377,8 @@ Before an enemy charges this unit it must make a Psychology test, if failed does
 
 
 If enemy defeated in close combat and unit strength less than this unit&apos;s, the enemy is automatically broken.</description>
+      <alias>Fears</alias>
+      <alias>Feared</alias>
     </rule>
     <rule id="96f0-c50f-e59e-85fa" name="Terror" publicationId="315e-e3c4-08af-fd51" page="81" hidden="false">
       <description>Unit causes Terror.
@@ -1392,23 +1397,43 @@ Cannot cast spells.
 If in combat half of the Stupid creatures stop fighting.
 If not in combat moves half it&apos;s normal speed forwards, charges enemies encountered and pins both units in place if friendly unit is encountered.
 Immune to all further Psychology tests.</description>
+      <alias>Stupid</alias>
     </rule>
     <rule id="e930-0b71-2fef-3937" name="Fly" hidden="false">
       <description>Unit can fly</description>
+      <alias>Flys</alias>
+      <alias>Flying</alias>
+      <alias>Flies</alias>
+      <alias>Flyer</alias>
+      <alias>Flyers</alias>
     </rule>
     <rule id="494d-d57a-c1fa-b48e" name="Scaly Skin 3+" hidden="false">
       <description>Scaly Skin gives 3+ saving throw</description>
     </rule>
-    <rule id="6a56-df83-e623-2218" name="Fast Cavalry" hidden="false">
-      <description>See rulebook</description>
+    <rule id="6a56-df83-e623-2218" name="Fast Cavalry" hidden="false" publicationId="315e-e3c4-08af-fd51" page="117">
+      <description>Receives no bonus for ranks.
+Unless charging, may reform at any time in the Movement phase without penalty.
+When shooting, can fire all round regardless of the direction the model is pointing. Needs to be facing the enemy as normal for charging, stand &amp; shoot reactions, etc.
+Can shoot even when marching with -1 penalty for moving.
+Fleeing fast cavalry rally at the start of their next turn, may reform facing in any direction, and is free to move during the Movement phase.</description>
     </rule>
-    <rule id="889c-dfc3-95a5-2d30" name="Scouts" hidden="false">
+    <rule id="889c-dfc3-95a5-2d30" name="Scouts" hidden="false" publicationId="315e-e3c4-08af-fd51" page="112">
       <description>These troops are skilled at sneaking forwards to scout out the enemy before the main force arrives. By making the best use of cover, advancing at night, or with other troops providing a diversion, they are able to deploy ahead of the rest of the army.
 Scouts are set up after both armies have been deployed. They can be set up anywhere on the table, at least 10&quot; away from the enemy and must be out of the sight of any enemy troops and in or behind interposing terrain (not out in the open!). If both armies contain troops with this ability, each player should roll a D6, with the player scoring the highest choosing whether he deploys before or after the enemy&apos;s Scouts. Two opposing groups of Scouts cannot be set up within 10&quot; of each other.
 Alternatively, Scouts can be placed on the controlling player&apos;s deployment zone like any other troops, after deployment of both main armies is finished.</description>
     </rule>
-    <rule id="1945-ac89-9cc4-3537" name="Skirmishers" hidden="false">
-      <description>Unit are skirmishers</description>
+    <rule id="1945-ac89-9cc4-3537" name="Skirmishers" hidden="false" publicationId="315e-e3c4-08af-fd51" page="115">
+      <description>Unit are skirmishers
+Positioned up to 1&quot; apart so they are not touching each other.
+Has an arc of sight of 360 degrees, can declare charges or shoot in any direction.
+Does not turn or wheel, each model is moved in any direction without penalty, must form a loose group or line no more than 1&quot; apart when movement is complete.
+Suffers no penalty for crossing obstacles or difficult/very difficult ground.
+Moves at double their Movement characteristic all the time (not doubled again for Charge or March). Standard move value still used to work out pursuit and fleeing distances. If moving more than their standard Movement characteristic cannot shoot that turn.
+Do not block line of sight of other members of their own unit.
+Enemy shooting suffers -1 to hit penalty in same way as shooting at a single man-sized model.
+Receives no combat bonus for additional ranks. Does not negate rank bonus of other units if they charge them in the flank or rear.</description>
+      <alias>Skirmisher</alias>
+      <alias>Skirmish</alias>
     </rule>
     <rule id="ab5d-dda1-bffc-a027" name="Frenzy" publicationId="315e-e3c4-08af-fd51" page="84" hidden="false">
       <description>Subject to frenzy. +1 Attack
@@ -1417,31 +1442,31 @@ Frenzied troops must pursue broken units.
 Frenzied troops cannot flee when charged.
 Frenzied troops are immune to Panic, Fear, Terror, Hatred, etc.
 Lost when defeated in Close Combat.</description>
+      <alias>Frenzied</alias>
     </rule>
     <rule id="2738-27d5-f4af-4722" name="Poisoned Attacks" publicationId="315e-e3c4-08af-fd51" page="114" hidden="false">
-      <description>Poisoned Attacks. Hits of 6 auto wound. Sve as normal.</description>
+      <description>Poisoned Attacks. Hits of 6 auto wound. Save as normal.</description>
     </rule>
-    <rule id="e08e-1c7b-a667-f05b" name="Killing Blow" hidden="false">
+    <rule id="e08e-1c7b-a667-f05b" name="Killing Blow" hidden="false" publicationId="315e-e3c4-08af-fd51" page="112">
       <description>Wound roll of 6 slays man sized opponent, no saving throw, no matter how many wounds. Ward save still applies</description>
     </rule>
     <rule id="410a-0d06-9044-665e" name="Stubborn" hidden="false">
       <description>Leadership breaktest are unmodified.</description>
     </rule>
-    <rule id="59c1-8a35-5a25-ebe1" name="Regeneration" hidden="false">
+    <rule id="59c1-8a35-5a25-ebe1" name="Regeneration" hidden="false" publicationId="315e-e3c4-08af-fd51" page="113">
       <description>A creature with this ability may try to regenerate any wound on a 1d6 roll of 4+. Only one attempt may be made on each wound to regenerate it.
 Troops that are able to can regenerate damage if not too badly hurt. Work this out as follows. When attacked in close combat, shot at, or the target of spells, calculate the number of wounds suffered as normal. Once all attacks for the phase have been made, the creature may try to regenerate. Roll a D6 for each wound suffered during that phase. If a 4 or more is rolled, that wound has regenerated. You may only try to regenerate any single wound once. Any regenerated wounds are reinstated, and models removed as casualties are replaced if enough wounds are regenerated.
-The results of combat, panic, etc are worked out after creatures have regenerated (the number of wounds inflicted does not include any that arc regenerated).</description>
+The results of combat, panic, etc are worked out after creatures have regenerated (the number of wounds inflicted does not include any that arc regenerated).
+If one of more wounds sustained from a flame attack, can no longer regenerate for the rest of the battle.
+</description>
     </rule>
-    <rule id="8ae3-9724-980f-7308" name="Unbreakable" hidden="false">
-      <description>Some creatures are utterly fearless and will never give 
-up a battle, no matter how hopeless the situation 
-might be. This could be because of the troops&apos;
-extreme bravery, or because the creatures fighting are not truly alive.
+    <rule id="8ae3-9724-980f-7308" name="Unbreakable" hidden="false" publicationId="315e-e3c4-08af-fd51" page="112">
+      <description>Some creatures are utterly fearless and will never give up a battle, no matter how hopeless the situation might be. This could be because of the troops&apos; extreme bravery, or because the creatures fighting are not truly alive.
 These troops never break in close combat, and they are also immune to panic, terror and fear or any other Psychology rules. If defeated in close combat (even by fear-causing creatures that outnumber them) unbreakable troops continue to fight on regardless of results. They may never, however. declare that they are fleeing as a charge reaction, as they will literally die fighting under any circumstances.</description>
     </rule>
-    <rule id="ff2b-8db6-64fa-e9ca" name="Immune to Psycology" publicationId="315e-e3c4-08af-fd51" page="112" hidden="false">
+    <rule id="ff2b-8db6-64fa-e9ca" name="Immune to Psychology" publicationId="315e-e3c4-08af-fd51" page="112" hidden="false">
       <description>Some warriors and creatures in the Warhammer world are almost completely fearless, or such grizzled veterans that scenes which would make lesser troops panic have no effect on them.
-Troops that are immune to psychology are never affected by fear terror, frenzy or any other Psychology rules. Troops immune to Psychology may never flee as a charge reaction - they are far too proud and brave to do this! These troops still have to take Break tests as normal.</description>
+Troops that are immune to psychology are never affected by Fear, Terror, Frenzy or any other Psychology rules. Troops immune to Psychology may never flee as a charge reaction - they are far too proud and brave to do this! These troops still have to take Break tests as normal.</description>
     </rule>
     <rule id="e5ce-0262-e817-adc2" name="Brace Of Pistols" hidden="false">
       <description>In first round of combat (H-T-H) the model counts as having two handweapons. In the first turn only these have STR4 and Armour Piercing.</description>
@@ -1449,9 +1474,14 @@ Troops that are immune to psychology are never affected by fear terror, frenzy o
     <rule id="1e6c-d634-a65c-78eb" name="Hatred" hidden="false">
       <description>In the first turn of combat you may re-roll missed &apos;To-hit&apos; rolls on Hated enemies.
 Must always pursue fleeing Hated enemies.</description>
+      <alias>Hate</alias>
+      <alias>Hates</alias>
     </rule>
     <rule id="eecc-4ed0-db8a-f6dc" name="Thrown Weapons" hidden="false">
       <description>Thrown weapons do not suffer penalties for long range, nor for moving</description>
+      <alias>Thrown Weapon</alias>
+      <alias>Throwing Weapon</alias>
+      <alias>Throwing Weapons</alias>
     </rule>
     <rule id="df8d-7c05-c47b-9cd6" name="Magical Resistance (2)" hidden="false">
       <description>Generates two dispel dice when spells cast at the unit</description>
@@ -1462,7 +1492,7 @@ Must always pursue fleeing Hated enemies.</description>
     <rule id="ac96-22af-fac6-56f9" name="Scaly Skin 4+" hidden="false">
       <description>Armour save 4+</description>
     </rule>
-    <rule id="fbdc-6e5e-eba8-357c" name="Flammable" hidden="false">
+    <rule id="fbdc-6e5e-eba8-357c" name="Flammable" hidden="false" publicationId="315e-e3c4-08af-fd51" page="114">
       <description>A flammable creature hit by a flaming weapon or fiery spell will take double wounds, so every wound suffered by a flammable creature will be doubled to 2 wounds. Take any saves before multiplying the wounds.</description>
     </rule>
     <rule id="bc68-6c48-02d1-3ce4" name="Sword of Striking" hidden="false">
@@ -1741,43 +1771,51 @@ The spell cannot affect Undead targets, Chaos Daemons
     <rule name="Panic" id="3e2b-7c7e-6b71-c3d5" hidden="false">
       <description>A unit that fails a Panic test Flees.
 Cannot rally this turn if Panicking at start of turn.</description>
+      <alias>Panics</alias>
+      <alias>Panicked</alias>
+      <alias>Panicking</alias>
+    </rule>
+    <rule name="Breath Weapon" id="73c2-89ab-351b-cc63" hidden="false" publicationId="315e-e3c4-08af-fd51" page="114">
+      <description>A model with a breath weapon may use it in the Shooting phase. Use the Flame template, placing the broad end over the intended target and the narrow end next to the creature&apos;s head. Any model that lies completely under the template is hit automatically, those that lie partially under the template are hit on a 4+. Characters are eligible for &apos;Look out, Sir!&apos; rolls if they are in a unit.</description>
+      <alias>Breath Weapons</alias>
     </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="5556-38ea-b278-4a8f" name="Hand Weapon" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC only</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236"/>
       </characteristics>
     </profile>
     <profile id="72aa-da68-2dae-4ab6" name="Additional Hand weapon" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564"/>
-        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378"/>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+1A</characteristic>
       </characteristics>
     </profile>
     <profile id="3596-7d17-9ca2-fb92" name="Halberd" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC only</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User +1</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Requires 2 Hands</characteristic>
       </characteristics>
     </profile>
     <profile id="97d4-ed3b-5f76-5a23" name="Great Weapon" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564"/>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User +2</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Requires two hands
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Requires 2 Hands,
 Always Strikes Last</characteristic>
       </characteristics>
     </profile>
     <profile id="a15a-0123-6693-7a50" name="Lance" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564"/>
-        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">+2S on charge</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Mounted models only.</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+2S on charge,
+Mounted models only</characteristic>
       </characteristics>
     </profile>
     <profile id="3d79-7984-991a-8b67" name="Shield" hidden="false" typeId="f681-9937-db53-f1d8" typeName="Armour">
@@ -1800,16 +1838,16 @@ Always Strikes Last</characteristic>
     </profile>
     <profile id="ec7d-fa6d-d0f6-5589" name="Spear (Mounted)" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">-</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+1S on charge</characteristic>
       </characteristics>
     </profile>
-    <profile id="222b-1e29-9d24-09d7" name="Spears (Infantry)" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
+    <profile id="222b-1e29-9d24-09d7" name="Spear (Infantry)" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">-</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">May fight in two ranks</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">May fight in two ranks (only to front, must not have moved that turn)</characteristic>
       </characteristics>
     </profile>
     <profile id="ec76-323e-c09d-eae4" name="Bow" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
@@ -1825,14 +1863,14 @@ Always Strikes Last</characteristic>
         <characteristic name="Special rules" typeId="42c3-68ab-cfa5-203e"/>
       </characteristics>
     </profile>
-    <profile id="67c1-cca3-76a7-0667" name="Long Bow" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
+    <profile id="67c1-cca3-76a7-0667" name="Longbow" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">30&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">3</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236"/>
       </characteristics>
     </profile>
-    <profile id="5e53-1e3a-3e8e-22b2" name="Short Bow" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
+    <profile id="5e53-1e3a-3e8e-22b2" name="Shortbow" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">16&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">3</characteristic>
@@ -1843,17 +1881,17 @@ Always Strikes Last</characteristic>
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">30&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">4</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Mv or Fire</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Move-or-Fire</characteristic>
       </characteristics>
     </profile>
     <profile id="67a2-04c0-f8fb-7741" name="Sling" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">18&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">3</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">x2 shots if within 9&quot;</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">x2 Shots if within 9&quot;</characteristic>
       </characteristics>
     </profile>
-    <profile id="9c9b-f589-846f-c1d8" name="Throwing Star/ Knife" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
+    <profile id="9c9b-f589-846f-c1d8" name="Throwing Star/Knife" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">6&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
@@ -1862,7 +1900,7 @@ Always Strikes Last</characteristic>
     </profile>
     <profile id="c4c3-8f22-9db7-1a00" name="Throwing Axe" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
-        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">4&quot;</characteristic>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">6&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
         <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Thrown weapon, ST +1</characteristic>
       </characteristics>
@@ -1871,28 +1909,31 @@ Always Strikes Last</characteristic>
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">24&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">4</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Armour piercing(ie -2 sv) Move or Fire</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Armour piercing(ie -2 sv), 
+Move-or-Fire</characteristic>
       </characteristics>
     </profile>
     <profile id="e6ab-509a-9826-7080" name="Pistol" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">8&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">4</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Armour piercing, In CC S4, AP for first turn of combat only.</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Armour piercing, Does not suffer hit penalties for long range or moving. 
+In CC S4; AP for first turn of combat only.</characteristic>
       </characteristics>
     </profile>
     <profile id="10f8-e196-d180-044c" name="Flail" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+2 Str on first turn of combat. Requires 2 hands</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Requires 2 Hands,
++2S on first turn of combat</characteristic>
       </characteristics>
     </profile>
     <profile id="929d-16ed-c03a-8d1c" name="Morning Star" hidden="false" typeId="7889-42d9-70a0-3ea9" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">CC</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+1 S on first turn of combat</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+1S on first turn of combat</characteristic>
       </characteristics>
     </profile>
     <profile id="f9f4-4ab2-8b24-8433" name="War machines" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile">
@@ -1912,14 +1953,14 @@ Always Strikes Last</characteristic>
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">8&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">As User</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Thrown Weapon</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Thrown weapon</characteristic>
       </characteristics>
     </profile>
-    <profile name="Repeating Crossbow" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="5284-1ada-3fd3-c21b">
+    <profile name="Repeater Crossbow" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="5284-1ada-3fd3-c21b">
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">24&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">3</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236"/>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">x2 Shots</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

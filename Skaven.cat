@@ -153,6 +153,20 @@
             <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
             <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Grey Seer Spells" id="3424-bcd1-5e98-0252" hidden="false" type="rule" targetId="9355-4af6-8922-b9ec"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Token" hidden="false" id="2955-2b57-2f2b-e430" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="4">
+              <costs>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="fd2d-3d55-edb2-2ba7"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e974-a683-4908-3d55"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry id="d3a8-9071-25e9-e96e" name="Magic Selection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
@@ -163,7 +177,7 @@
             <entryLink id="a11a-682e-76d8-7705" name="Magical Weapons" hidden="false" collective="false" import="true" targetId="e4b1-5857-9d82-17de" type="selectionEntryGroup" sortIndex="1"/>
             <entryLink id="83c7-a6e7-4c02-a1a3" name="Arcane Items" hidden="false" collective="false" import="true" targetId="5317-e91e-bd46-d862" type="selectionEntryGroup" sortIndex="2"/>
             <entryLink id="a710-8ced-e6dd-2248" name="Talismans" hidden="false" collective="false" import="true" targetId="e52c-c54c-35bc-9c8e" type="selectionEntryGroup" sortIndex="4"/>
-            <entryLink id="0ccb-58d2-9b97-2471" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="dbce-3caf-2139-09ee" type="selectionEntryGroup" sortIndex="3"/>
+            <entryLink id="0ccb-58d2-9b97-2471" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="dbce-3caf-2139-09ee" type="selectionEntryGroup" sortIndex="3" collapsible="true"/>
           </entryLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -273,32 +287,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="bab9-a413-7d55-ecd4" name="Weapons Teams" hidden="false" collective="false" import="true" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c1f-89dc-f3bb-7bb7" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="e3d0-c2f2-b80e-9300" name="Ratling Guns" hidden="false" collective="false" import="true" targetId="ceb9-c114-4d4e-b694" type="selectionEntry" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="60"/>
-              </costs>
-            </entryLink>
-            <entryLink id="4246-5187-fa81-f39d" name="Warpfire Thrower" hidden="false" collective="false" import="true" targetId="d945-3e5e-d5fd-458a" type="selectionEntry" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="75"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="0" field="9c1f-89dc-f3bb-7bb7">
-              <conditions>
-                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1e80-3a58-efb6-4d63" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="abdb-bbd0-41b2-5dff" type="selectionEntry" sortIndex="2">
           <constraints>
@@ -329,6 +317,15 @@
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="41cd-eb57-24e4-192e" type="max"/>
           </constraints>
+        </entryLink>
+        <entryLink import="true" name="Weapons Teams" hidden="false" id="b3a9-81cf-0b55-f363" type="selectionEntryGroup" targetId="e622-1919-ea1d-7050">
+          <modifiers>
+            <modifier type="set" value="0" field="b383-f0f7-49ae-8ccf">
+              <conditions>
+                <condition type="greaterThan" value="0" field="selections" scope="de11-a357-3ba6-675f" childId="56a4-0d2b-e940-b802" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
@@ -737,6 +734,25 @@
             <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
             <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
           </costs>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Doesn&apos;t know any spells" hidden="false" id="7b14-2229-196d-787a">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdbb-0aa4-4d64-b72d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9231-daa5-e2f7-ac82" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Token" hidden="false" id="c6ab-9897-aedc-d344" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b6e5-9e2e-3fe2-22bf"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b308-4b75-8c7c-7327"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -834,7 +850,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1f0-2b0c-ce9f-1408" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="c9ae-7ce2-d0b4-4528" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="2">
+        <entryLink id="c9ae-7ce2-d0b4-4528" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="069a-3290-d89a-bb97" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6240-ef85-b43b-0c18" type="max"/>
@@ -928,25 +944,6 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="7595-526c-7c21-6a73" name="Weapons Teams" hidden="false" collective="false" import="true" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="395d-9098-0951-f34b" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="0f3f-7831-a4b3-58f7" name="Ratling Guns" hidden="false" collective="false" import="true" targetId="ceb9-c114-4d4e-b694" type="selectionEntry" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="60"/>
-              </costs>
-            </entryLink>
-            <entryLink id="27b8-55ee-86d2-6166" name="Warpfire Thrower" hidden="false" collective="false" import="true" targetId="d945-3e5e-d5fd-458a" type="selectionEntry" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="75"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink id="77d8-8617-390c-bc1c" name="Hand Weapon" hidden="false" collective="false" import="true" targetId="abdb-bbd0-41b2-5dff" type="selectionEntry" sortIndex="3">
           <constraints>
@@ -978,6 +975,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6df6-06c7-8399-2121" type="max"/>
           </constraints>
         </entryLink>
+        <entryLink import="true" name="Weapons Teams" hidden="false" id="c676-ff67-371b-4b50" type="selectionEntryGroup" targetId="e622-1919-ea1d-7050"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -1104,7 +1102,7 @@
       <infoLinks>
         <infoLink id="28fe-1629-35e5-14c6" name="Giant Rat" hidden="false" targetId="bf8a-51f8-640d-e05e" type="profile"/>
         <infoLink id="d5eb-01c2-ecc8-2e17" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="973b-b9ae-3735-12f2" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="973b-b9ae-3735-12f2" name="Mixed Units Rats" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
         <infoLink id="9daa-a1a7-7fad-a076" name="Loss of Packmaster Rats" hidden="false" targetId="0508-fdb0-9121-f470" type="rule"/>
         <infoLink name="Mainstay Unit" id="36e7-ac3e-944f-2680" hidden="false" targetId="8268-5855-2a56-fec3" type="rule">
           <modifiers>
@@ -1307,7 +1305,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ffe3-8e1a-7331-8aa8" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="252e-10c8-cf8b-f380" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="4">
+        <entryLink id="252e-10c8-cf8b-f380" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="4">
           <modifiers>
             <modifier type="increment" field="ecfa-8486-4f6c-c249" value="2">
               <repeats>
@@ -1521,7 +1519,7 @@
         <entryLink id="81d4-5f1e-d0d6-a4d2" name="Poisoned Wind Globes" hidden="false" collective="false" import="true" targetId="1f76-6b68-80ce-c078" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e56b-5c0b-cf60-4fd6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="173d-d38b-0382-10e7" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="173d-d38b-0382-10e7" type="min"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -1823,7 +1821,7 @@
       <infoLinks>
         <infoLink id="3a02-62ad-46dc-4526" name="Rat Ogre" hidden="false" targetId="fc86-fbd7-0686-603e" type="profile"/>
         <infoLink id="897a-91c0-5254-df7e" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="3c36-f3e3-a08a-79f2" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="3c36-f3e3-a08a-79f2" name="Mixed Units Ogres" hidden="false" targetId="eb4b-9b5a-83bb-4984" type="rule"/>
         <infoLink id="71ba-39bc-bed3-fa80" name="Loss of Packmaster Ogres" hidden="false" targetId="c78e-7036-f2ed-c05b" type="rule"/>
         <infoLink id="bc0d-c30a-ac3d-014a" name="Fear" hidden="false" targetId="1524-2372-4aa0-6881" type="rule"/>
       </infoLinks>
@@ -1992,6 +1990,8 @@
       <infoLinks>
         <infoLink id="9958-b0b6-9eef-603d" name="Warp Lightning Cannon" hidden="false" targetId="9ffb-ded0-c4a5-99d6" type="profile"/>
         <infoLink id="a6b6-0c52-7535-ec8d" name="Warp Lightning Cannon" hidden="false" targetId="b7a8-4fc3-6ae0-b42d" type="rule"/>
+        <infoLink name="Warp-Lightning Cannon" id="e18d-b2f0-d5b0-4ba4" hidden="false" type="profile" targetId="f603-3dc9-c57c-5f9c"/>
+        <infoLink name="Warp-Lightning Cannon Misfire Chart" id="048a-beb9-c4bf-58a7" hidden="false" type="rule" targetId="e1c5-0d3a-7333-2289"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8d70-7c29-e292-1345" name="Rare" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
@@ -2066,7 +2066,7 @@
         <infoLink id="ccba-e8fc-e4a7-2615" name="Warp-Lightning" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" targetId="46f3-9f3f-34e6-5a7b" type="rule"/>
         <infoLink id="557e-53a3-88aa-a228" name="Impact Hits" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" targetId="1c26-203d-9d7f-dbbd" type="rule"/>
         <infoLink id="6f48-e7e0-2dcd-e31b" name="Movement (Doomwheel)" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" targetId="41fb-4798-d76e-4887" type="rule"/>
-        <infoLink id="7640-ed18-8146-c380" name="Immune to Psycology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
+        <infoLink id="7640-ed18-8146-c380" name="Immune to Psychology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
         <infoLink id="d345-ce97-325e-3084" name="Magical Resistance (2)" hidden="false" targetId="df8d-7c05-c47b-9cd6" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -2141,7 +2141,7 @@ Taking a Vermin Lord counts as taking a Lord, a Hero choice and a Rare slot. It 
       </infoGroups>
       <infoLinks>
         <infoLink id="f027-6cfc-6862-064e" name="Terror" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" targetId="96f0-c50f-e59e-85fa" type="rule"/>
-        <infoLink id="1c34-5e2b-97b4-846e" name="Immune to Psycology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
+        <infoLink id="1c34-5e2b-97b4-846e" name="Immune to Psychology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="df65-4e84-b944-9d19" name="General" hidden="false" targetId="a37e-7207-de6d-acb0" primary="false"/>
@@ -2244,7 +2244,7 @@ The Bell has no special power until Skrolk is wounded. Then at the end of each p
         </profile>
       </profiles>
       <rules>
-        <rule id="d22e-55bb-81a3-fd72" name="Dodge" publicationId="3305-568f-80f2-eb25" page="4" hidden="false">
+        <rule id="d22e-55bb-81a3-fd72" name="Dodge" publicationId="3305-568f-80f2-eb25" page="4" hidden="false" noindex="true">
           <description>Deathmaster Snikch is preternaturally quick and agile to the point where he can pluck speeding arrows out of the air. Whether this is due to his extraordinary training or some controlled mutation is unknown. Because of his exceptional speed and agility the Deathmaster can dodge hand-to-hand combat blows, spells and missiles. This is represented by a 4+ Ward save.</description>
         </rule>
         <rule id="8178-dbd9-ab5f-244d" name="Assassin Supreme" publicationId="3305-568f-80f2-eb25" page="6" hidden="false">
@@ -2300,7 +2300,7 @@ has the Killing Blow special rule.</description>
         </profile>
       </profiles>
       <rules>
-        <rule id="59e8-802d-fa9d-a4d8" name="Magic" publicationId="3305-568f-80f2-eb25" page="3" hidden="false">
+        <rule id="59e8-802d-fa9d-a4d8" name="Magic" publicationId="3305-568f-80f2-eb25" page="3" hidden="false" noindex="true">
           <description>Ikit Claw is a level 4 Wizard. He can choose his spells from one of the following lists: Lores of Fire, Shadow, Death, Beasts, Metal, Heavens, Dark Magic and Dark Emissaries magic. This is in addition to his default Warp-Lightning spell, that he can also cast on 11+ for 3D6 Strength 5 hits (see rules for the Warlock Master on page 77 of the Skaven Army book).</description>
         </rule>
       </rules>
@@ -2335,7 +2335,7 @@ has the Killing Blow special rule.</description>
         </infoGroup>
       </infoGroups>
       <infoLinks>
-        <infoLink id="541c-78c9-efab-f057" name="Immune to Psycology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
+        <infoLink id="541c-78c9-efab-f057" name="Immune to Psychology" hidden="false" targetId="ff2b-8db6-64fa-e9ca" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1fce-6d04-4fec-de85" name="Special Characters" hidden="false" targetId="0644-bfcd-32c2-21dc" primary="true"/>
@@ -2346,8 +2346,8 @@ has the Killing Blow special rule.</description>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="410"/>
-        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="4"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e18e-22f9-4c86-c1fc" name="Warlord Queek Head-Taker" publicationId="3305-568f-80f2-eb25" page="4" hidden="false" collective="false" import="true" type="upgrade">
@@ -2375,7 +2375,7 @@ has the Killing Blow special rule.</description>
       <infoGroups>
         <infoGroup id="bb22-a8c8-f298-d325" name="Weapons" publicationId="3305-568f-80f2-eb25" page="4" hidden="false">
           <rules>
-            <rule id="a487-d0d9-f926-a826" name="Two Weapons" hidden="false">
+            <rule id="a487-d0d9-f926-a826" name="Two Weapons" hidden="false" noindex="true">
               <description>Warlord Queek is extremely adept at fighting with his two magic weapons, in a blinding-fast flurry of blades. He uses both the Gouger and Dwarf Slayer at the same time, obtaining a total of 5 Attacks in close combat. All these attacks allow no armour save, as well as wounding Dwarfs on a 2+.</description>
             </rule>
           </rules>
@@ -2491,6 +2491,9 @@ has the Killing Blow special rule.</description>
             <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
             <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Tunnelling" id="f0fc-7509-92fb-5817" hidden="false" type="rule" targetId="9baa-0aaa-51ac-f382"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2560,7 +2563,7 @@ has the Killing Blow special rule.</description>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d291-aec3-c0aa-e256" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="5583-decb-995a-1e7d" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
+        <entryLink id="5583-decb-995a-1e7d" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
           <modifiers>
             <modifier type="increment" field="ecfa-8486-4f6c-c249" value="3">
               <repeats>
@@ -2685,7 +2688,7 @@ has the Killing Blow special rule.</description>
     </selectionEntry>
     <selectionEntry id="a070-388c-3321-695c" name="Harbinger of Mutation" hidden="false" collective="false" import="true" type="unit" publicationId="f804-741f-2593-2dec" page="78">
       <infoLinks>
-        <infoLink id="22a1-72a4-e321-1ab1" name="Harbingers of Mutation" hidden="false" targetId="b392-460f-d849-8f47" type="profile"/>
+        <infoLink id="22a1-72a4-e321-1ab1" name="Harbinger of Mutation" hidden="false" targetId="b392-460f-d849-8f47" type="profile"/>
         <infoLink id="3b73-62d5-7d3d-451f" name="Beastmaster" hidden="false" targetId="e842-813f-9f51-6f93" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -2729,6 +2732,17 @@ has the Killing Blow special rule.</description>
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Token" hidden="false" id="fd3e-e697-915f-971e" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7d4-79bc-7a54-de3c"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77ad-2d06-d732-afe7"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2756,8 +2770,8 @@ has the Killing Blow special rule.</description>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="65"/>
-        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="1"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -2862,6 +2876,20 @@ The Creature-killer requires two hands to use, but as Throt has three hands, he 
             <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
             <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Grey Seer Spells" id="420c-d4f5-0c62-4723" hidden="false" type="rule" targetId="9355-4af6-8922-b9ec"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Token" hidden="false" id="8b9c-6cde-92c7-93d1" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="13">
+              <costs>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="13" field="selections" scope="parent" shared="true" id="b01a-ade0-54f8-939b"/>
+                <constraint type="max" value="13" field="selections" scope="parent" shared="true" id="c38c-6c4a-ccb2-e765"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Boneripper" hidden="false" id="18a5-31f6-a766-b6d9" sortIndex="1">
           <profiles>
@@ -2890,7 +2918,7 @@ The Creature-killer requires two hands to use, but as Throt has three hands, he 
             <rule name="Automaton" id="e877-80f8-715f-fa4c" hidden="false">
               <description>Boneripper is Unbreakable and immune to the effects of poison.</description>
             </rule>
-            <rule name="Warpfire Thrower" id="24d8-2d37-158f-eb14" hidden="false">
+            <rule name="Warpfire Thrower" id="24d8-2d37-158f-eb14" hidden="false" noindex="true">
               <description>A small version of the dreaded warpfire thrower has been built in place of one of Boneripper&apos;s arms. This is treated as a breath weapon in all respects. When firing, place the flame template with its narrow end in contact with the weapon&apos;s muzzle. Models hit by the template suffer a Strength 4 hit. Units suffering any casualties must take a Panic test.</description>
             </rule>
             <rule name="Pawn" id="099e-c1d9-2732-c790" hidden="false">
@@ -2940,15 +2968,6 @@ D6 Result
           </costs>
         </entryLink>
         <entryLink id="7a8c-b45b-6634-d491" name="General" hidden="false" collective="false" import="true" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry" sortIndex="3"/>
-        <entryLink import="true" name="Warpstone Token" hidden="false" id="8b9c-6cde-92c7-93d1" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="13" sortIndex="6">
-          <costs>
-            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="min" value="13" field="selections" scope="parent" shared="true" id="b01a-ade0-54f8-939b"/>
-            <constraint type="max" value="13" field="selections" scope="parent" shared="true" id="c38c-6c4a-ccb2-e765"/>
-          </constraints>
-        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="560"/>
@@ -2991,7 +3010,7 @@ D6 Result
         </profile>
       </profiles>
       <rules>
-        <rule name="Brain Transplant" id="bf85-2403-a37c-3456" hidden="false" publicationId="77fc-8c88-6486-6437" page="25">
+        <rule name="Brain Transplant" id="bf85-2403-a37c-3456" hidden="false" publicationId="77fc-8c88-6486-6437" page="25" noindex="true">
           <description>Ghoritch still has the mind of a berserker and lapses into a blood-maddened rage in the heat of battle. He is subject to Frenzy. If he ever loses his Frenzy, he will become subject to Stupidity for the rest of the battle.</description>
         </rule>
         <rule name="Piston-Driven Claws" id="26f8-93dc-dbfb-510e" hidden="false">
@@ -3066,7 +3085,7 @@ D6 Result
       <infoLinks>
         <infoLink id="b853-d62f-d199-fb76" name="Giant Rat" hidden="false" targetId="bf8a-51f8-640d-e05e" type="profile"/>
         <infoLink id="41e2-9c18-9be5-d213" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="fede-bfba-15a6-016f" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="fede-bfba-15a6-016f" name="Mixed Units Rats" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
         <infoLink name="Loss of Packmaster" id="9023-4680-5fd1-3fa8" hidden="false" type="rule" targetId="2d50-e617-7c48-2d99"/>
         <infoLink name="Fear" id="4f90-4848-4734-c39e" hidden="false" type="rule" targetId="1524-2372-4aa0-6881"/>
       </infoLinks>
@@ -3184,7 +3203,7 @@ D6 Result
       <infoLinks>
         <infoLink id="e2b0-466c-1105-af83" name="Rat Ogre" hidden="false" targetId="fc86-fbd7-0686-603e" type="profile"/>
         <infoLink id="5c61-a4d0-a17f-a8a1" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="d1b4-25ff-e1f9-e379" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="d1b4-25ff-e1f9-e379" name="Mixed Units Ogres" hidden="false" targetId="eb4b-9b5a-83bb-4984" type="rule"/>
         <infoLink id="b580-a126-1ecd-0d30" name="Loss of Packmaster Ogres" hidden="false" targetId="c78e-7036-f2ed-c05b" type="rule"/>
         <infoLink id="9b3d-f6df-2688-3da6" name="Fear" hidden="false" targetId="1524-2372-4aa0-6881" type="rule"/>
         <infoLink name="Heavy Armour" id="c961-24ac-8e6a-df4f" hidden="false" type="profile" targetId="3dd5-f228-98a7-453a"/>
@@ -3250,7 +3269,7 @@ D6 Result
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="c344-d06e-923b-4b14" name="Mutant Rat Ogres" hidden="false" collective="false" import="true" type="unit" publicationId="77fc-8c88-6486-6437" page="29" flatten="false" defaultAmount="">
+    <selectionEntry id="c344-d06e-923b-4b14" name="Mutant Rat Ogres" hidden="false" collective="false" import="true" type="unit" publicationId="77fc-8c88-6486-6437" page="29" flatten="false">
       <modifiers>
         <modifier type="increment" field="e428-22d7-6c6d-d51a" value="1">
           <repeats>
@@ -3311,7 +3330,7 @@ D6 Result
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink id="de1e-e76f-8aaf-1656" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule">
+        <infoLink id="de1e-e76f-8aaf-1656" name="Mixed Units Ogres" hidden="false" targetId="eb4b-9b5a-83bb-4984" type="rule">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -3567,7 +3586,7 @@ D6 Result
       <infoLinks>
         <infoLink id="8dd4-fb41-8bb6-6bb1" name="Augmented Rat Ogre" hidden="false" targetId="d975-919d-21ef-2045" type="profile"/>
         <infoLink id="c392-d16b-5bb0-cbde" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="40fd-5c18-52b8-0e5a" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="40fd-5c18-52b8-0e5a" name="Mixed Units Ogres" hidden="false" targetId="eb4b-9b5a-83bb-4984" type="rule"/>
         <infoLink id="fd79-2a22-ecc0-e285" name="Loss of Packmaster Ogres" hidden="false" targetId="c78e-7036-f2ed-c05b" type="rule"/>
         <infoLink id="d884-6fe7-cea9-f00b" name="Fear" hidden="false" targetId="1524-2372-4aa0-6881" type="rule"/>
         <infoLink name="Stupidity" id="1cf7-edf6-3fc5-f1b7" hidden="false" type="rule" targetId="5d6f-7b4d-6093-4922"/>
@@ -3640,7 +3659,7 @@ D6 Result
                     <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
                   </costs>
                   <rules>
-                    <rule name="Warpfire Thrower" id="37dc-452c-15f8-a370" hidden="false">
+                    <rule name="Warpfire Thrower" id="37dc-452c-15f8-a370" hidden="false" noindex="true">
                       <description>One Augments Rat Ogre per unit may be armed with a Warpfire Thrower. Do not roll an Artillery die to see how far the jet of liquid is projected, simply place the teardrop-shaped template with the thin end touching the model&apos;s base and determine hits as normal.</description>
                     </rule>
                   </rules>
@@ -3735,7 +3754,7 @@ D6 Result
       </constraints>
       <infoLinks>
         <infoLink id="5930-d22e-ae5c-12e1" name="Packmaster" hidden="false" targetId="0506-f2c3-3371-0852" type="profile"/>
-        <infoLink id="9945-1347-ee50-fb02" name="Mixed Units" hidden="false" targetId="1cd6-47da-45f9-1044" type="rule"/>
+        <infoLink id="9945-1347-ee50-fb02" name="Mixed Units Ogres" hidden="false" targetId="eb4b-9b5a-83bb-4984" type="rule"/>
         <infoLink name="Troll" id="3bfd-e637-703b-1470" hidden="false" type="profile" targetId="871f-80b8-528f-4d19"/>
       </infoLinks>
       <categoryLinks>
@@ -3885,7 +3904,7 @@ D6 Result
         <infoLink name="Terror" id="8333-a752-2309-07d0" hidden="false" type="rule" targetId="96f0-c50f-e59e-85fa"/>
         <infoLink name="Stupidity" id="8fc8-47fc-8be8-791e" hidden="false" type="rule" targetId="5d6f-7b4d-6093-4922"/>
         <infoLink name="Large Target" id="b22e-0b25-43cd-df8b" hidden="false" type="rule" targetId="4463-1b38-aa4d-e03c"/>
-        <infoLink name="Tunneling" id="200e-3841-cb7f-1f48" hidden="false" type="rule" targetId="9baa-0aaa-51ac-f382"/>
+        <infoLink name="Tunnelling" id="200e-3841-cb7f-1f48" hidden="false" type="rule" targetId="9baa-0aaa-51ac-f382"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="215"/>
@@ -3896,7 +3915,7 @@ D6 Result
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f009-23f3-d905-1ecb"/>
       </constraints>
       <rules>
-        <rule name="Unit Strength 6" id="2bde-b02d-5a7b-a790" hidden="false">
+        <rule name="Unit Strength 6" id="2bde-b02d-5a7b-a790" hidden="false" noindex="true">
           <description>Has a Unit Strength of 6</description>
         </rule>
       </rules>
@@ -3944,10 +3963,10 @@ D6 Result
         <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="ed65-1d74-d2b0-5fa9"/>
       </constraints>
       <rules>
-        <rule name="Unit Strength 4" id="5e64-08df-5e9d-146f" hidden="false">
+        <rule name="Unit Strength 4" id="5e64-08df-5e9d-146f" hidden="false" noindex="true">
           <description>Has a Unit Strength of 4</description>
         </rule>
-        <rule name="Breathe Warpfire" id="a703-5bb9-ab42-16ee" hidden="false">
+        <rule name="Breathe Warpfire" id="a703-5bb9-ab42-16ee" hidden="false" noindex="true">
           <description>Strength 5 breath weapon, causes Panic test in enemy unit if a casualty is caused.</description>
         </rule>
       </rules>
@@ -3988,7 +4007,7 @@ D6 Result
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3425-cd17-b6e5-5f96" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="eded-ffd9-74f9-d9ec" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
+        <entryLink id="eded-ffd9-74f9-d9ec" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5d69-2a6d-e6d0-f371" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ebe1-8fdd-5527-fffc" type="max"/>
@@ -4074,7 +4093,7 @@ D6 Result
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="85ab-2475-7efb-9d60" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="740d-abaf-a8cf-200b" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
+        <entryLink id="740d-abaf-a8cf-200b" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4bc9-5c3d-4e8d-84db" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c5b7-6c54-5663-ac5e" type="max"/>
@@ -4089,6 +4108,26 @@ D6 Result
           </costs>
         </entryLink>
         <entryLink import="true" name="General" hidden="false" id="e1eb-212a-95a3-b9b9" collective="false" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry" sortIndex="1"/>
+        <entryLink import="true" name="Warpstone Token" hidden="false" id="e9ef-380f-ba4d-648d" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4c5-7212-e9c2-fd66"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b86a-e3c3-76a7-1468"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="2" field="d4c5-7212-e9c2-fd66"/>
+                <modifier type="set" value="2" field="b86a-e3c3-76a7-1468"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="5f83-ab04-9c86-0db4" childId="d162-1020-16b4-f19e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="215"/>
@@ -4111,15 +4150,15 @@ D6 Result
               </constraints>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
-                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="1"/>
+                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Level 2 magic" hidden="false" id="d162-1020-16b4-f19e" defaultAmount="0" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="15"/>
-                <cost name="Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name="Casting Dice" typeId="fcec-2340-6368-a2ba" value="2"/>
+                <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8d5-a95f-559e-41e0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4191,7 +4230,7 @@ D6 Result
             <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
           </costs>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Doesn&apos;t have spells" hidden="false" id="444a-2a10-f865-103c" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Doesn&apos;t know any spells" hidden="false" id="444a-2a10-f865-103c" sortIndex="2">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e4a-8094-19e4-ad09" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="681a-c7c5-c1b0-e569" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4204,6 +4243,17 @@ D6 Result
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Token" hidden="false" id="bd77-8fea-c6e2-cde1" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="1">
+              <costs>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9431-379d-93d4-323f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4d5-8512-3f73-c296"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4244,8 +4294,8 @@ D6 Result
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="180"/>
-        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="1"/>
-        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="3"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4444,8 +4494,8 @@ D6 Result
               </constraints>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="45"/>
-                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="2"/>
+                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
               </costs>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Learns the Plague spell" hidden="false" id="0677-8d81-33b4-53bd" sortIndex="1">
@@ -4487,8 +4537,8 @@ D6 Result
               </constraints>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
-                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="1"/>
+                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -4506,6 +4556,26 @@ D6 Result
           </constraints>
         </entryLink>
         <entryLink id="ca21-0a75-27f2-ad78" name="General" hidden="false" collective="false" import="true" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry" sortIndex="1"/>
+        <entryLink import="true" name="Warpstone Token" hidden="false" id="9ca6-22c7-1826-c732" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="1">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e27-da96-e0be-24f5"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="432c-d84d-1c57-1a4f"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="2" field="4e27-da96-e0be-24f5"/>
+                <modifier type="set" value="2" field="432c-d84d-1c57-1a4f"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="f729-2707-a0b3-2f80" childId="0ccd-d12f-a60b-30de" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="60"/>
@@ -4550,7 +4620,7 @@ D6 Result
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="59d6-ecb5-7eb2-e273" type="max"/>
           </constraints>
         </entryLink>
-        <entryLink id="6bdc-963f-8978-5d1d" name="Throwing Star/ Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="2">
+        <entryLink id="6bdc-963f-8978-5d1d" name="Throwing Star/Knife" hidden="false" collective="false" import="true" targetId="6c61-37b0-5fa6-c20c" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="33c9-f68a-8d8c-8de2" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b053-a645-19a2-f959" type="max"/>
@@ -4578,7 +4648,7 @@ D6 Result
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry id="903b-3396-1916-60a6" name="Nurglitch, Arch Plague Lord" hidden="false" collective="false" import="true" type="unit" page="">
+    <selectionEntry id="903b-3396-1916-60a6" name="Nurglitch, Arch Plague Lord" hidden="false" collective="false" import="true" type="unit">
       <infoLinks>
         <infoLink id="bcd9-17e4-7384-3656" name="Nurglitch and retinue" hidden="false" targetId="0d41-d0a8-3c3f-efd1" type="profile"/>
       </infoLinks>
@@ -4674,8 +4744,8 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
       </entryLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="575"/>
-        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+        <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="3"/>
+        <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
       </costs>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -4685,7 +4755,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
         </modifier>
       </modifiers>
       <rules>
-        <rule name="Unit Strength 3" id="2220-3abb-431a-4fd4" hidden="false">
+        <rule name="Unit Strength 3" id="2220-3abb-431a-4fd4" hidden="false" noindex="true">
           <description>Nurglitch and his retinue have a Unit Strength of 3</description>
         </rule>
         <rule name="The Passion of the Putrid" id="a223-3f81-b32c-42ab" hidden="false">
@@ -4767,7 +4837,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
           </constraints>
         </entryLink>
         <entryLink id="63b0-23a2-8ed8-5263" name="General" hidden="false" collective="false" import="true" targetId="1b7c-2c90-6d96-28c9" type="selectionEntry" sortIndex="1"/>
-        <entryLink import="true" name="Warpstone Token" hidden="false" id="0512-06f1-0c82-11df" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="3" sortIndex="4">
+        <entryLink import="true" name="Warpstone Token" hidden="false" id="0512-06f1-0c82-11df" type="selectionEntry" targetId="093e-504e-b5cf-5ca4" defaultAmount="2">
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
           </costs>
@@ -4809,15 +4879,15 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
               </constraints>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
-                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="2"/>
+                <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="1"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Level 3 magic" hidden="false" id="2737-8910-f024-cfc2" defaultAmount="0" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="60"/>
-                <cost name="Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
-                <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
+                <cost name="Casting Dice" typeId="fcec-2340-6368-a2ba" value="3"/>
+                <cost name="Dispel Dice" typeId="6001-b2bf-4529-c07d" value="2"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb1e-0abf-ccf9-8d3f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -5184,7 +5254,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
         <rule name="Cloud of Flies" id="7729-7369-f2c3-de59" hidden="false">
           <description>Enemies suffer -1 to hit the Pusbags in close combat.</description>
         </rule>
-        <rule name="Dying" id="ed0d-c620-138e-bd8f" hidden="false">
+        <rule name="Dying" id="ed0d-c620-138e-bd8f" hidden="false" noindex="true">
           <description>Lose D6 models at the end of each Skaven Movement phase.</description>
         </rule>
       </rules>
@@ -5316,10 +5386,10 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
       <rules>
-        <rule name="D6 Attacks" id="f0e2-09fb-de8f-0a5a" hidden="false">
+        <rule name="D6 Attacks" id="f0e2-09fb-de8f-0a5a" hidden="false" noindex="true">
           <description>Roll a D6 for the number of Attacks the Rat Spawn have at the beginning of each Close Combat phase.</description>
         </rule>
-        <rule name="Unit Strength 3" id="a621-fb74-3a99-d182" hidden="false">
+        <rule name="Unit Strength 3" id="a621-fb74-3a99-d182" hidden="false" noindex="true">
           <description>Has a Unit Strength of 3.</description>
         </rule>
       </rules>
@@ -5697,6 +5767,9 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Warpstone Token" id="e4b4-1a49-4050-a4c0" hidden="false" type="rule" targetId="20e5-9fdd-a83b-01ad"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="f32b-cdb7-6229-538e" name="Cloak of Shadows" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -5888,7 +5961,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
       <infoLinks>
         <infoLink id="1721-23cf-a9de-8d76" name="Screaming Bell" hidden="false" targetId="5484-c014-b312-c985" type="profile"/>
         <infoLink id="9e1e-9c36-3b77-2388" name="Large Target" hidden="false" targetId="4463-1b38-aa4d-e03c" type="rule"/>
-        <infoLink id="f19f-76f8-e4e5-9e44" name="Screamin Bell" hidden="false" targetId="45be-84d6-055f-b45a" type="rule"/>
+        <infoLink id="f19f-76f8-e4e5-9e44" name="Screaming Bell" hidden="false" targetId="45be-84d6-055f-b45a" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -5912,6 +5985,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
     <selectionEntry id="e92b-3eab-c634-f54a" name="Whip" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="9fe0-0a3e-726c-344b" name="Whip" hidden="false" targetId="37b1-7d4f-c4af-0c2a" type="rule"/>
+        <infoLink name="Whip" id="d7af-0018-6431-6ed5" hidden="false" type="profile" targetId="ab28-e1ca-5a01-6927"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -5987,6 +6061,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
       </constraints>
       <infoLinks>
         <infoLink id="26b0-343c-d351-0fd3" name="Reliable" hidden="false" targetId="2d58-92a4-6462-a2a9" type="rule"/>
+        <infoLink name="Jezzail" id="f590-e261-e0ff-c149" hidden="false" type="profile" targetId="1224-36a0-6749-85b7"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -6000,6 +6075,7 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
       </constraints>
       <infoLinks>
         <infoLink id="3259-1532-d029-bbcc" name="Poisoned Wind Globes" hidden="false" targetId="6e0c-360d-82eb-4ca4" type="rule"/>
+        <infoLink name="Poisoned Wind Globes" id="3dfd-b6ea-a702-d12a" hidden="false" type="profile" targetId="b9d4-6937-7a5c-e761"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0"/>
@@ -6031,6 +6107,11 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0"/>
         <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Warpfire Thrower" id="dda8-33ed-9c58-46e8" hidden="false" type="rule" targetId="03fa-6447-1097-a95e"/>
+        <infoLink name="Warpfire Thrower" id="b364-abf7-ba7c-e71d" hidden="false" type="profile" targetId="de26-62d1-491d-70dd"/>
+        <infoLink name="Warpfire Thrower Misfire Chart" id="7f36-d99a-f19f-8cbd" hidden="false" type="rule" targetId="f7af-1997-6b26-4889"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Army List" hidden="false" id="38b2-0d06-1a6f-8e90" defaultAmount="1">
       <selectionEntryGroups>
@@ -6052,18 +6133,11 @@ The Bubonic Sceptre can be used to inflict vile contagions on Nurglitch&apos;s e
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22d1-2502-998a-7781"/>
                   </constraints>
-                  <rules>
-                    <rule name="+100 Victory Points per character killed" id="cc05-d634-f1ff-01ee" hidden="false">
-                      <description>The Eshin army is principally employed to collapse command structures and hence gets +100 Victory Points for each enemy character killed in addition to the usual bonuses.</description>
-                    </rule>
-                    <rule name="Skitterleap may place in base contact" id="5d7c-74a8-66d8-6408" hidden="false">
-                      <description>When casting Skitterleap, the teleported model may even be placed in base contact with any enemy that is not fleeing, and counts as pursuing into fresh enemy models.</description>
-                    </rule>
-                    <rule name="Under Cover of Darkness" id="2855-3bac-988e-8081" hidden="false">
-                      <description>If army consists entirely of skirmishers and character models may impose the following rule:
-At the start of each game turn, roll an Artillery dice and multiply the result by 3 to find out how far in inches the troops can see through the darkness. If you roll a Misfire then the moon is bright enough for normal warfare for that game turn. You cannot shoot, charge or cast spells at targets you cannot see.</description>
-                    </rule>
-                  </rules>
+                  <infoLinks>
+                    <infoLink name="+100 Victory Points per character killed" id="e1eb-83da-bacb-4d55" hidden="false" type="rule" targetId="702f-54b1-8a09-c86b"/>
+                    <infoLink name="Skitterleap may place in base contact" id="53ec-57e1-9c52-15cf" hidden="false" type="rule" targetId="f0d2-a0d4-e597-7ea0"/>
+                    <infoLink name="Under Cover of Darkness" id="d5be-f29f-8851-6bba" hidden="false" type="rule" targetId="4182-ba48-bc2e-0a6b"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntry>
@@ -6382,9 +6456,31 @@ At the start of each game turn, roll an Artillery dice and multiply the result b
         <entryLink id="5d7e-703e-b690-9a5d" name="Blade of Nurglitch" hidden="false" collective="false" import="true" targetId="35d6-b422-3e9e-e2a5" type="selectionEntry" sortIndex="3"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Weapons Teams" id="e622-1919-ea1d-7050" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b383-f0f7-49ae-8ccf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Ratling Guns" hidden="false" id="c462-6d2c-a1b0-10f7" collective="false" targetId="ceb9-c114-4d4e-b694" type="selectionEntry" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="60"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Warpfire Thrower" hidden="false" id="955c-e3d7-28b1-83bd" collective="false" targetId="d945-3e5e-d5fd-458a" type="selectionEntry" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="75"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Cavalry Base" id="64c1-c961-6ceb-2341" hidden="false" type="rule" targetId="87c1-6c1a-3811-96ff"/>
+        <infoLink name="Skirmishers" id="c27e-5da3-42ac-d468" hidden="false" type="rule" targetId="1945-ac89-9cc4-3537"/>
+        <infoLink name="Attached" id="73ae-3527-469b-9822" hidden="false" type="rule" targetId="cff4-57e3-0948-7625"/>
+      </infoLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
-    <rule id="ff30-ef5e-258c-2825" name="HE WHO RUNS AWAYLIVES TO FIGHT ANOTHER DAY!" publicationId="f804-741f-2593-2dec" page="10" hidden="false">
+    <rule id="ff30-ef5e-258c-2825" name="HE WHO RUNS AWAY LIVES TO FIGHT ANOTHER DAY!" publicationId="f804-741f-2593-2dec" page="10" hidden="false">
       <description>All models In the Skaven army add +1 to the total rolled to determine the distance they flee.</description>
     </rule>
     <rule id="dd9e-3b75-bdce-f723" name="STRENGTH IN NUMBERS" publicationId="f804-741f-2593-2dec" page="10" hidden="false">
@@ -6410,8 +6506,9 @@ Furthermore, if Skaven characters refuse a challenge, the Skaven player, rather 
     <rule id="1947-e406-8e37-31b4" name="Warpstone Weapons" publicationId="f804-741f-2593-2dec" page="10" hidden="false">
       <description>The following Skaven weapons contain enough warpstone to count as magical, and so can damage creatures invulnerable to non-magical weapons:
 Assassins&apos; and Gutter Runners&apos; poisoned weapons. plague censers&apos; gas and hits, Warlock Engineers&apos; warp-blades. warplock pistols. poisoned wind globes, Jezzails, Ratling Guns, warpfire Throwers and Warp-lightning Cannons.</description>
+      <alias>Warpstone Weapon</alias>
     </rule>
-    <rule id="8268-5855-2a56-fec3" name="Mainstay Unit" publicationId="f804-741f-2593-2dec" page="11" hidden="false">
+    <rule id="8268-5855-2a56-fec3" name="Mainstay Unit" publicationId="f804-741f-2593-2dec" page="11" hidden="false" noindex="false">
       <description>The number of mainstay units in the army restricts the maximum number of multiples of any other unit that can be included in the army.
 For example, if you have one unit of Clanrats, you can include one unit of Globadiers, one of Stormvermin, one of Gutter Runners. etc. If you have two units of Clanrats then you can include up to two units of Globadiers, up to two units of Gutter Runners, up to two Warp Lightning Cannons. etc.
 AlI normal restrictions still apply on top of this.</description>
@@ -6423,8 +6520,8 @@ All Skaven units automatically pass Panic tests caused by Rat Swarms.</descripti
     <rule id="b822-e5e8-ebfc-fa2f" name="Swarm" publicationId="f804-741f-2593-2dec" page="11" hidden="false">
       <description>Swarms represent many creatures on a single 40mm x 40mm base. This base is treated as a single model with several Wounds and Attacks. A Rat Swann base fights at full effect until it has taken 5 Wounds then it is removed. Rat Swarms are Unbreakable and cannot be joined by characters.</description>
     </rule>
-    <rule id="4839-e7a0-f4de-4b56" name="Small" publicationId="f804-741f-2593-2dec" page="11" hidden="false">
-      <description>Rat Swarms don&apos;t block line  sight of other units. Note that this does not allow  other skirmishers to pass through them.</description>
+    <rule id="4839-e7a0-f4de-4b56" name="Small" publicationId="f804-741f-2593-2dec" page="11" hidden="false" noindex="true">
+      <description>Rat Swarms don&apos;t block line sight of other units. Note that this does not allow other skirmishers to pass through them.</description>
     </rule>
     <rule id="1a49-def0-9def-0a44" name="Plague Censer" publicationId="f804-741f-2593-2dec" page="32" hidden="false">
       <description>A censer consecrated to the Horned Rat and filled with lethal burning warpstone is used as a weapon by its crazed bearers (it counts as a flail). In addition when the censer is swung around violently it creates a deadly cloud of warpstone vapours. If the bearer is in base contact with an enemy at the beginning of the Close Combat phase (both the Skaven player&apos;s and the enemy&apos;s), all models in base contact with one or more models armed with a censer must take a Toughness test, as should the bearer himself. If the test Is failed, the victim suffers 1 wound with no armour save. All Clan Pestilens Skaven and models with the Mark of Nurgle fail the test only on a roll of 6. The wounds caused by the gas are resolved before impact hits but after Assassins are revealed and 
@@ -6434,13 +6531,15 @@ challenged models are moved. Wounds caused by the gas count for combat resolutio
       <description>Counts as an additional hand weapon if the bearer is in base contact with an enemy.
 In addition, it can be used in a similar way to a spear, allowing the bearer to make one Attack (regardless of the model&apos;s number of Attacks) through a rank of Rat Ogres. The same applies to Giant Rats, except that whip armed models can attack over any number of ranks of Giant Rats.
 An enemy model cannot attack back against whip-armed models if it is not in base contact with them.</description>
+      <alias>Whips</alias>
     </rule>
     <rule id="24a6-b3ee-d336-85d5" name="Smoke Bombs" publicationId="f804-741f-2593-2dec" page="32" hidden="false">
       <description>An Assassin equipped with these bombs uses them to create a diversion and disappear in a puff of smoke when things are starting to look bad in a fight.
 If the Assassin is fighting on his own (ie, he is not inside a unit and not part of a multiple combat) and has to flee from a close combat, enemy units have to roll 4+ on a D6 to be able to pursue him. Note that the Assassin cannot choose not to use the bombs.</description>
     </rule>
     <rule id="cbb2-3d84-55bb-b738" name="Warplock Pistol" publicationId="f804-741f-2593-2dec" page="32" hidden="false">
-      <description>A warplock pistol follows the normal rules for pistols. except that it has a range of 10&quot; and a Strength of 5. In addition, warplock pistols are Reliable (see p.27).</description>
+      <description>A warplock pistol follows the normal rules for pistols. except that it has a range of 10&quot; and a Strength of 5. In addition, warplock pistols are Reliable.</description>
+      <alias>Warplock Pistols</alias>
     </rule>
     <rule id="f3b4-3d39-18a1-98b8" name="Fellblade" publicationId="f804-741f-2593-2dec" page="36" hidden="false">
       <description>The Fellblade&apos;s wielder has Strength 10. Each unsaved wound is multiplied into 1D6 wounds. Roll a dice at the end of the wielder&apos;s turn: on a 3+ there is no effect; on a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</description>
@@ -6531,8 +6630,9 @@ Roll a D6 every time it is used. On a 1 the Storm Daemon runs out of power and c
       <description>The Wizard can decide to activate the Eye at the beginning of each of his Magic phases. On a result of 2-6 add one Power dice to the Power dice pool. If a 1 is rolled, no dice are added to the pool and instead one dice is removed from the pool.</description>
     </rule>
     <rule id="20e5-9fdd-a83b-01ad" name="Warpstone Token" publicationId="f804-741f-2593-2dec" page="38" hidden="false">
-      <description>See the rules for Warpstone tokens in the section of Skaven magic page 34
-In the same way as scrolls, all Skaven wizards in the army can buy as many Warpstone tokens as they can –afford within the limit of the points they can spend on magic items. Buying one or more tokens does not count as taking an arcane item.</description>
+      <description>Before casting a spell, a Skaven Wizard can declare they are eating some of their Warpstone Tokens to boost their powers. When casting a spell roll one extra dice for each Warpstone Token used, these are added to the casting total, counting as normal Power dice and can cause Miscast and Irresistible Force.
+For any of the warpstone generated dice that rolls a 1, the Skaven Wizard suffers a wound, with no saves of any kind allowed. The results of Miscasts still apply as normal to Skaven Wizards.
+In the same way as scrolls, all Skaven wizards in the army can buy as many Warpstone tokens as they can afford within the limit of the points they can spend on magic items. Buying one or more tokens does not count as taking an arcane item.</description>
     </rule>
     <rule id="eaf9-050c-f205-0db6" name="Cloak of Shadows" publicationId="f804-741f-2593-2dec" page="38" hidden="false">
       <description>Clan Eshin only
@@ -6588,13 +6688,18 @@ Roll a D6 at the beginningof each of the units Movement phases if the unit is no
       <description>If the unit carrying the banner is fighting in a combat • where its side outnumbers the enemy, the &apos;outnumber enemy&apos; bonus is +2 instead of the normal +1.</description>
     </rule>
     <rule id="45be-84d6-055f-b45a" name="Screaming Bell" publicationId="f804-741f-2593-2dec" page="30" hidden="false">
-      <description>Honestly there are too many rules see page 30-31 of the Skaven army book for the full rules or don&apos;t use this item.</description>
+      <description>Has a Unit Strength of 4 (5 with the Grey Seer)
+The Screaming Bell has a Ward save of 3+, the Grey Seer does not benefit from this save, but gets a normal 5+ armour save from being on a chariot.
+
+
+Honestly there are too many rules see page 30-31 of the Skaven army book for the full rules or don&apos;t use this item.</description>
     </rule>
     <rule id="e842-813f-9f51-6f93" name="Beastmaster" publicationId="f804-741f-2593-2dec" page="22" hidden="false">
       <description>All Clan Moulder units within 6&quot; of this unit can re-roll any failed psychology tests.</description>
     </rule>
     <rule id="b9f2-8289-258a-50b5" name="Warp-Blades" publicationId="f804-741f-2593-2dec" page="32" hidden="false">
       <description>The Warp blades give the bearer +1 Str and allow them to cast the Warp lightning Spell through them. The player must still use Power dice to cast the spell throught the warp blades.</description>
+      <alias>Warp Blades</alias>
     </rule>
     <rule id="b257-59d5-938a-6916" name="Upgraded Warp-Energy Condenser" publicationId="f804-741f-2593-2dec" page="30" hidden="false">
       <description>This allows the bearer to cast the Warp Lightning spell with one dice more Power dice than he is normally allowed.</description>
@@ -6612,7 +6717,7 @@ The  dice is added to the player&apos;s pool.</description>
 Hidden Assassins are not placed on the table but are assumed to move with the unit they accompany. At the start of the game, note down which unit they are hidden in. If the unit is wiped out or flees off the table before the Assassin is revealed then the Assassin is lost and Victory points are scored as normal. Before he&apos;s revealed there is no other way he can be harmed.
 Hidden Assassins may be revealed at the beginning of any of your turns or at the start of any Close Combat phase. The player declares that his unit contains an Assassin and places the model amongst the ranks where it can fight, displacing a normal rank•and•file model (not a character, champion, musician or standard bearer) to the rearmost rank. If there are no such models in the front rank, the Assassin is placed in the second rank until there is enough room for him in the first rank. Assassins always strike first in the round of close combat they are revealed, even against chargers. If an enemy model is also entitled to always strike first, the model with higher Initiative strikes first (roll a D6 if they have equal Initiative).</description>
     </rule>
-    <rule id="b5f4-d830-c4ce-5a5f" name="Leadership" publicationId="f804-741f-2593-2dec" page="18" hidden="false">
+    <rule id="b5f4-d830-c4ce-5a5f" name="Leadership" publicationId="f804-741f-2593-2dec" page="18" hidden="false" noindex="true">
       <description>Units in a Skaven army can never use an 
 Assassin&apos;s Leadership, and an Assassin cannot be the 
 army&apos;s General (therefore your army must include at
@@ -6629,25 +6734,26 @@ least one other character to act as the General).</description>
 If a Globadier rolls a 1 on his dice to hit, he has dropped the globe or the fragile sphere has broken in his hands. Resolve the hit against the Globadier himself, but he will be wounded only on a 5+, to take into account his protective gear.</description>
     </rule>
     <rule id="87c1-6c1a-3811-96ff" name="Cavalry Base" publicationId="f804-741f-2593-2dec" page="27" hidden="false">
-      <description>Weapon teams consist of two Skaven models mounted on a single cavalry base. Treat them exactly like cavalry models, except where otherwise specified. This means that they have a Unit Strength of 2 and get a 6+ basic armour save (to represent that there are effectively two models to kill, similar to cavalry models). This also explains their two Attacks.</description>
+      <description>Weapon teams consist of two Skaven models mounted on a single cavalry base. Treat them exactly like cavalry models, except where otherwise specified. This means that they have a Unit Strength of 2 and get a 6+ basic armour save (to represent that there are effectively two models to kill, similar to cavalry models). This also explains their two Attacks. Cannot be singled out as targets by enemy shooters.</description>
     </rule>
     <rule id="cff4-57e3-0948-7625" name="Attached" publicationId="f804-741f-2593-2dec" page="27" hidden="false">
       <description>Weapon teams must be deployed at the same time and within 3&quot; of the unit of Clanrat Warriors or Stormvermin they have been bought with. After that they are-free to move as they like, and they count as a separate unit for the rest of the game (Including for the purpose of calculating the enemy&apos;s Victory points).
 As long as they are within 3” of the unit they have been bought with, they can use that unit&apos;s rank bonus to modify their own Leadership. Enemies wishing to target a weapon team with missile fire or spells have the same limitations as when targeting single characters on foot, as long as the weapon team is within 3&quot; of a friendly unit of at least five models of similar size or larger.
-Weapon teams can never charge into close ((what. even if frenzied.</description>
+Weapon teams can never charge into close combat, even if frenzied.</description>
     </rule>
     <rule id="ffd2-03e1-1c3e-9ac8" name="Ratling Guns" publicationId="f804-741f-2593-2dec" page="27" hidden="false">
       <description>To fire the gun, first you have to determine how many shots are fired. To do this, roll a D6: the result is the amount of shots fired. You can now decide whether to stop or to roll a second dice. The result of the second dice is added to the first and their total will be the amount of shots fired. You can now stop or choose to continue firing, repeating the same process. When you decide to stop, check the distance to the target and, if it is within range, all shots fired will automatically hit.
 You can continue to roll dice as long as you want, but if you roll a DOUBLE (ie, you roll a duplicate of one of the numbers already rolled), the Ratting Gun suffers some kind of malfunction while firing. As soon as you roll a double consult the Misfire Chan below.
 Note that Ratling Guns can stand &amp; shoot.</description>
+      <alias>Ratling Gun</alias>
     </rule>
     <rule id="9968-da1b-2226-a121" name="Ratling Gun Misfire Chart " publicationId="f804-741f-2593-2dec" page="27" hidden="false">
       <description>Double 1 or double 2: Jammed! The pump powering the firing mechanism lases pressure before the crew can fire. No shots are fired this turn.
 Double 3 or double 4: Wh000ps!!! The steam pump controls malfunction and a cloud of green steam surrounds the crew as the gun spins around wildly. Roll a Scatter dice — all the shots (including the ones rolled with the last dice, the one that has caused the Misfire) are fired in the direction shown by the arrow by the half-blinded and disoriented crew, hitting the first unu in their path within 15-, friend or foe!
 Double 5 or double 6: BAM! The weapon builds up excessive pressure and the release mechanism lock, shut. No shots are fired this turn, the weapon explode&apos; and the team is torn to shreds.</description>
     </rule>
-    <rule id="1cd6-47da-45f9-1044" name="Mixed Units" publicationId="f804-741f-2593-2dec" page="22" hidden="false">
-      <description>Pack models and Packmasters fight in mixed units. In these Packmasters and any character that joins the unit may be placed anywhere within the unit (normally tends to be the back). Missile hits and impact hits are randomized 1-5 Pack models, 6 Packmasters. The Pack models use the Packmasters leadership.</description>
+    <rule id="1cd6-47da-45f9-1044" name="Mixed Units Rats" publicationId="f804-741f-2593-2dec" page="22" hidden="false">
+      <description>Giant Rats and Packmasters fight in mixed units. In these units, Packmasters and any character that joins the unit may be placed anywhere within the unit (normally tends to be the back). Missile hits and impact hits are randomized 1-5 Giant Rat, 6 Packmaster. The Giant Rats use the Packmasters leadership as long as one is alive.</description>
     </rule>
     <rule id="0508-fdb0-9121-f470" name="Loss of Packmaster Rats" publicationId="f804-741f-2593-2dec" page="23" hidden="false">
       <description>Of all packmasters are killed and there are no characters inthe unit the Rats must charge the nearest enemy unit. If no Enemy is within range they must move towards the nearest enemy in the compulsory Movememnt phase.</description>
@@ -6660,6 +6766,9 @@ Double 5 or double 6: BAM! The weapon builds up excessive pressure and the relea
     </rule>
     <rule id="b7a8-4fc3-6ae0-b42d" name="Warp Lightning Cannon" publicationId="f804-741f-2593-2dec" page="28" hidden="false">
       <description>page 28-29</description>
+      <alias>Warp Lightning Cannons</alias>
+      <alias>Warp-Lightning Cannon</alias>
+      <alias>Warp-Lightning Cannons</alias>
     </rule>
     <rule id="817d-5215-f302-e439" name="Chariot" publicationId="c8a8-4ccc-5f4b-8fcb" page="1" hidden="false">
       <description>The Doomwheel is treated as a chariot with the exceptions noted opposite.</description>
@@ -6669,10 +6778,10 @@ Double 5 or double 6: BAM! The weapon builds up excessive pressure and the relea
 
 If the Doomwheel’s movement is sufficient to move into contact with a unit it is considered to have charged. No formal declaration of a charge is necessary. The target unit can make the usual response just as if it had been  harged in the normal manner. These rules apply even if the Doomwheel hits a friendly unit by accident!</description>
     </rule>
-    <rule id="1c26-203d-9d7f-dbbd" name="Impact Hits" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false">
+    <rule id="1c26-203d-9d7f-dbbd" name="Impact Hits" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" noindex="true">
       <description>When the Doomwheel charges into combat it inflicts D6+2 impact hits at Strength 5. This is worked out exactly like other chariot impact hits and only differs in so far as the number of hits is greater.</description>
     </rule>
-    <rule id="46f3-9f3f-34e6-5a7b" name="Warp-Lightning" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false">
+    <rule id="46f3-9f3f-34e6-5a7b" name="Warp-Lightning" publicationId="c8a8-4ccc-5f4b-8fcb" page="2" hidden="false" noindex="true">
       <description>In each Skaven shooting phase the Doomwheel can unleash D3 bolts of warp- lightning (roll in each Shooting phase). The power of the warp-lightning can be very unpredictable – it can shatter mountains one minute and only cause slight burns the next. The Skaven player can decide not to release the warp- lightning – this helps to keep the Skaven alive until the Doomwheel gets closer to the enemy.
 
 To work out how powerful the lightning is, each turn roll an Artillery dice. If you roll a number (2, 4, 6, 8 or 10) then that is the Strength of all the lightning bolts this turn. Each of the three bolts has a range of 3D6&quot; and will strike the nearest model within range in any direction – friend or foe! The bolts of warp-lightning arc wildly so they ignore any terrain between them and the nearest target. If the Doomwheel is in contact with a unit or model don’t bother rolling for range, the bolts will automatically hit the targets in contact. If several targets are the same distance away (or in contact with the Doomwheel) the bolt will be attracted to the target with the best saving throw (since they have more metal armour on them). Each bolt will only damage a single model, but the model struck suffers not one but D6 wounds if the bolt damages them. Against war engines, ridden monsters and the like the hit scored by a bolt of warp-lightning is randomised between the machine/creature and its crew.
@@ -6687,6 +6796,53 @@ If you roll a ‘misfire’ result something has gone awry with the warpstone ge
     </rule>
     <rule name="Tunnelling" id="9baa-0aaa-51ac-f382" hidden="false">
       <description>Follows the Tunnelling Rules on page 19 of the Warhammer Armies: Skaven</description>
+    </rule>
+    <rule name="+100 Victory Points per character killed" id="702f-54b1-8a09-c86b" hidden="false">
+      <description>The Eshin army is principally employed to collapse command structures and hence gets +100 Victory Points for each enemy character killed in addition to the usual bonuses.</description>
+    </rule>
+    <rule name="Skitterleap may place in base contact" id="f0d2-a0d4-e597-7ea0" hidden="false">
+      <description>When casting Skitterleap, the teleported model may even be placed in base contact with any enemy that is not fleeing, and counts as pursuing into fresh enemy models.</description>
+    </rule>
+    <rule name="Under Cover of Darkness" id="4182-ba48-bc2e-0a6b" hidden="false">
+      <description>If army consists entirely of Skirmishers and Character models may impose the following rule:
+At the start of each game turn, roll an Artillery dice and multiply the result by 3 to find out how far in inches the troops can see through the darkness. If you roll a Misfire then the moon is bright enough for normal warfare for that game turn. You cannot shoot, charge or cast spells at targets you cannot see.</description>
+    </rule>
+    <rule name="Skaven Magic" id="66f3-9fe0-dfad-6ce0" hidden="false">
+      <description>Spells are cast with Irresistible Force when the total rolled is 13 rather than on two or more 6s.
+Skaven Wizards begin the game with a number of Warpstone Tokens equal to their level.</description>
+    </rule>
+    <rule name="Grey Seer Spells" id="9355-4af6-8922-b9ec" hidden="false" publicationId="f804-741f-2593-2dec" page="34">
+      <description>Grey Seers are Level 4 Wizards and know four spells. At the beginning of the game roll a D6 and consult the chart below for each spell they have. If you roll a spell that has already been obtained keep rerolling until you get a spell that he doesn&apos;t have yet. After all spells have been rolled for one may be replaced with Skitterleap if he doesn&apos;t already have it.
+
+D6
+1. Skitterleap
+2. Warp Lightning
+3. Vermintide
+4. Pestilent Breath
+5. Death Frenzy
+6. Plague</description>
+    </rule>
+    <rule name="Warpfire Thrower" id="03fa-6447-1097-a95e" hidden="false" publicationId="f804-741f-2593-2dec" page="28">
+      <alias>Warpfire Throwers</alias>
+      <description>Place the flame template with its narrow end touching the Warpfire Thrower and the large part aimed at the target. The target must be in line of sight to shoot at it. Roll the Artillery dice and move the template the amount of inches shown by the dice towards the target to see where the warpflame lands. The template can overshoot the target. Determine which models are hit as per a Breath Weapon. A unit suffering any casualties must take a Panic test. If you roll a Misfire, the weapon doesn&apos;t fire, roll a D6 on the Warpfire Thrower Misfire chart.</description>
+    </rule>
+    <rule id="465f-cde8-1bd1-c2da" name="Mixed Units" publicationId="f804-741f-2593-2dec" page="22" hidden="false" noindex="true">
+      <description>Pack models and Packmasters fight in mixed units. In these Packmasters and any character that joins the unit may be placed anywhere within the unit (normally tends to be the back). Missile hits and impact hits are randomized 1-4 Pack models, 5-6 Packmasters. The Pack models use the Packmasters leadership.</description>
+    </rule>
+    <rule id="eb4b-9b5a-83bb-4984" name="Mixed Units Ogres" publicationId="f804-741f-2593-2dec" page="22" hidden="false">
+      <description>Rat Ogres and Packmasters fight in mixed units. Rat Ogres always form the first rank and can never be place in the second and following ranks. Packmasters and Characters joining the unit are formed up behind them, never in the first rank, but these units never get a rank bonus. 
+Missile hits and impact hits are randomized 1-4 Rat Ogre, 5-6 Packmaster. 
+Only consider the Rat Ogres when Manoeuvring, then place Packmasters at the back of the Rat Ogre&apos;s line. Rat Ogres cannot end their move in snaking formation.</description>
+    </rule>
+    <rule name="Warpfire Thrower Misfire Chart" id="f7af-1997-6b26-4889" hidden="false" publicationId="f804-741f-2593-2dec" page="28">
+      <description>1-2: Kaboom! Place the large circular template centred on the barrel and resolve the hit as normal. After this, the team is automatically removed.
+3-4: The barrel catches fire! The team runs desperately 2D6&quot; in a random direction (the model with the barrel in front), stopping if it comes in contact with anything, then explodes. Place the small circular template over the barrel and resolve the hit as normal. After this, the team is automatically removed.
+5-6: The weapon&apos;s nozzle blocks and squirts burning fuel over its crew. Work out the effect as if the team had been hit by their own weapon.</description>
+    </rule>
+    <rule id="e1c5-0d3a-7333-2289" name="Warp-Lightning Cannon Misfire Chart" publicationId="f804-741f-2593-2dec" page="29" hidden="false">
+      <description>1-2: The machine and its crew disappear in a green fireball. Remove them.
+3-4: Place the large template over the warpstone chunk inside the cannon. All the models under the template, including the cannon, suffer a hit at D6 Strength.
+5-6: The gun overloads with energy and starts spinning wildly under the effect of mysterious forces. It finally stops, firing an unbelievably powerful burst. Pivot the gun on the spot so that it faces in the direction indicated by a Scatter dice and resolve a shot at maximum range and maximum Strength (48&quot; and Strength 10!), firing flat.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -6889,7 +7045,7 @@ If you roll a ‘misfire’ result something has gone awry with the warpstone ge
       <characteristics>
         <characteristic name="Range" typeId="3107-4d1e-9a51-6564">10&quot;</characteristic>
         <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">5</characteristic>
-        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">cc , AP, Reliable</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">CC, AP, Reliable</characteristic>
       </characteristics>
     </profile>
     <profile id="5484-c014-b312-c985" name="Screaming Bell" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile">
@@ -7043,7 +7199,7 @@ Move or Fire</characteristic>
         <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">7</characteristic>
       </characteristics>
     </profile>
-    <profile id="5514-744c-8705-3bbe" name="Jezzails" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile">
+    <profile id="5514-744c-8705-3bbe" name="Jezzails" hidden="false" typeId="a54a-7f00-29bf-12b1" typeName="Profile" noindex="true">
       <characteristics>
         <characteristic name="Mv" typeId="0e92-d038-82bf-fb41">5</characteristic>
         <characteristic name="WS" typeId="f95b-da01-0578-3bdc">3</characteristic>
@@ -7475,6 +7631,46 @@ Armour Save: 5+</comment>
         <characteristic name="Ld" typeId="2d45-18fe-9eb3-b113">10</characteristic>
       </characteristics>
     </profile>
+    <profile name="Jezzail" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="1224-36a0-6749-85b7">
+      <characteristics>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">36&quot;</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">6</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Move-or-fire, Armour Piercing</characteristic>
+      </characteristics>
+      <alias>Jezzails</alias>
+    </profile>
+    <profile name="Poisoned Wind Globes" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="b9d4-6937-7a5c-e761">
+      <characteristics>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">8&quot;</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378"/>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">Thrown Weapon
+Each globe that hits wounds any target on a 4+, with no armour save allowed.
+If a 1 is rolled to hit, resolve the hit against the thrower, but will only be wounded on a 5+.</characteristic>
+      </characteristics>
+      <alias>Poisoned Wind Globe</alias>
+    </profile>
+    <profile name="Warpfire Thrower" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="de26-62d1-491d-70dd">
+      <characteristics>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">Artillery Dice</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">5</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">D3 Damage, -2 Save, Move-or-fire</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Warp-Lightning Cannon" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="f603-3dc9-c57c-5f9c">
+      <characteristics>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564">8D6&quot;</characteristic>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378">Artillery dice</characteristic>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">D6 Damage</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Whip" typeId="7889-42d9-70a0-3ea9" typeName="Weapon" hidden="false" id="ab28-e1ca-5a01-6927">
+      <characteristics>
+        <characteristic name="Range" typeId="3107-4d1e-9a51-6564"/>
+        <characteristic name="Strength" typeId="6fe4-1ebb-cb04-1378"/>
+        <characteristic name="Special Rules" typeId="a21a-cdc0-4b13-b236">+1 Attack if in base contact with an enemy.
+Can be used in a similar way to a spear to make one Attack through a rank of Rat Ogres or any number of ranks of Giant Rats. Cannot be attacked back by enemy if not in base contact.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <entryLinks>
     <entryLink import="true" name="Army List" hidden="false" id="3d69-4d30-7616-b509" type="selectionEntry" targetId="38b2-0d06-1a6f-8e90" defaultAmount="1">
@@ -7483,4 +7679,39 @@ Armour Save: 5+</comment>
       </categoryLinks>
     </entryLink>
   </entryLinks>
+  <infoLinks>
+    <infoLink name="+100 Victory Points per character killed" id="75fa-6216-6a62-0485" hidden="false" type="rule" targetId="702f-54b1-8a09-c86b">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="b5a6-e55a-38d1-5b1b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Under Cover of Darkness" id="533f-c3f6-7c18-3265" hidden="false" type="rule" targetId="4182-ba48-bc2e-0a6b">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="b5a6-e55a-38d1-5b1b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Skitterleap may place in base contact" id="1402-e1f8-de04-c381" hidden="false" type="rule" targetId="f0d2-a0d4-e597-7ea0">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="de11-a357-3ba6-675f" childId="b5a6-e55a-38d1-5b1b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="HE WHO RUNS AWAY LIVES TO FIGHT ANOTHER DAY!" id="9d5a-7f73-cbd3-4055" hidden="false" type="rule" targetId="ff30-ef5e-258c-2825"/>
+    <infoLink name="STRENGTH IN NUMBERS" id="f8a2-a1d4-e168-c417" hidden="false" type="rule" targetId="dd9e-3b75-bdce-f723"/>
+    <infoLink name="LIFE IS CHEAP" id="db04-a262-aa1e-6933" hidden="false" type="rule" targetId="9843-950f-0645-b717"/>
+    <infoLink name="LEAD FROM THE BACK" id="ebe9-3e94-1747-ba49" hidden="false" type="rule" targetId="a518-34d4-06c7-3068"/>
+    <infoLink name="Warpstone Weapons" id="c412-7113-3535-1ea4" hidden="false" type="rule" targetId="1947-e406-8e37-31b4"/>
+    <infoLink name="Skaven Magic" id="0d66-e9a9-8021-8f77" hidden="false" type="rule" targetId="66f3-9fe0-dfad-6ce0"/>
+  </infoLinks>
 </catalogue>
